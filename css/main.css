@@ -106,12 +106,12 @@ h2 {
   height: 90px;
   margin-bottom: 20px;
   position: relative;
-  width: 297px;
+  width: 260px;
 }
 
 .navbar-brand img {
   position: absolute;
-  top: -8px;
+  top: -2px;
 }
 
 .navbar-right {
