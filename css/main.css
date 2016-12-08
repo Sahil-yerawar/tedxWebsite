@@ -807,3 +807,6 @@ h2 {
   transform: translateZ(-10px) scale(2);
  z-index:-1;
 }
+.resizer1{
+    background-color: #4d4f51;
+}
