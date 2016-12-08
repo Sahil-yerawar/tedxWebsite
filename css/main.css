@@ -143,11 +143,17 @@ h2 {
   background-color: #4D4F51 ;
   position: fixed;
   top: 0;
-  /*height: 66px;*/
+  height: 66px;
 }
 
 .fixed-menu .navbar-right {
   padding: 0;
+
+}
+.fixed-menu .navbar-right li a:focus, .fixed-menu .navbar-right li a:hover, .fixed-menu .navbar-right .active a{
+  background-color: #fff;
+  color: #16728f;
+  height: 66px;
 }
 
 
