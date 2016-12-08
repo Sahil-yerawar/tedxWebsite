@@ -9,7 +9,8 @@
 body {
   font-family: 'Dosis', sans-serif;
   font-size: 17px;
-  color: #fff
+  color: #fff;
+  background-color: #4d4f51
 }
 
 
@@ -788,19 +789,19 @@ h2 {
   background-image: url("../images/slider/bg1.jpg");
   background-attachment: fixed;
   max-width: 100%;
-  height: 750px;
+  height: 600px;
 }
 .parallax-img2{
   background-image: url("../images/slider/bg2.jpg");
   background-attachment: fixed;
   max-width: 100%;
-  height: 750px;
+  height: 600px;
 }
 .parallax-img3{
   background-image: url("../images/slider/bg3.jpg");
   background-attachment: fixed;
   max-width: 100%;
-  height: 750px;
+  height: 600px;
 }
 #parallax-base1{
   transform: translateZ(-10px) scale(2);
