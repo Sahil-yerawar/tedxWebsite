@@ -133,7 +133,8 @@ h2 {
 .navbar-right li a:focus,
 .navbar-right .active a {
   background-color: #fff;
-  color: #16728f
+  color: #16728f;
+  height: 66px;
 }
 
 
@@ -141,6 +142,7 @@ h2 {
   background-color: #4D4F51 ;
   position: fixed;
   top: 0;
+  height: 66px;
 }
 
 .fixed-menu .navbar-right {
