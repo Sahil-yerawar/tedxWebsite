@@ -102,22 +102,22 @@ h2 {
 }
 
 .navbar-brand {
-  background-color: #1B7B98;
+  background-color: #4d4f51;
   height: 90px;
   margin-bottom: 20px;
   position: relative;
-  width: 260px;
+  width: 297px;
 }
 
 .navbar-brand img {
   position: absolute;
-  top: -2px;
+  top: -5px;
 }
 
 .navbar-right {
-  background-color: #1B7B98;
+  background-color: #4d4f51;
   padding:0 95px 0 0;
-  opacity: 1
+  opacity: 0.8
 }
 
 .navbar-right li a {
@@ -159,7 +159,7 @@ h2 {
   margin-top: 0;
   padding: 0;
   margin-bottom: 0;
-  width: 125px;
+  width: 170px;
 }
 
 .fixed-menu .navbar-brand img {
@@ -256,7 +256,7 @@ h2 {
 **************************/
 
 #explore {
-  background-color: #C34C39;
+  background-color: #5F6060;
   /*background-image: url("../images/plain-red-backgrounds-wallpaper-1.jpg");*/
   background-position: center bottom;
   background-size: contain;
@@ -393,7 +393,7 @@ h2 {
 *******Event CSS******
 **************************/
 #event {
-  background-color: #33888F;
+  background-color: #494949;
   /*background-image: url("../images/performar-bg.jpg");*/
   background-position: 50% 0;
   background-size: contain;
@@ -463,7 +463,7 @@ h2 {
 **************************/
 
 #about {
-  background-color: #75B46E;
+  background-color: #3F3F3F;
   position: relative;
   width: 100%;
   display: flex;
@@ -658,12 +658,13 @@ h2 {
 **************************/
 
 .contact-section {
-  background-color: #f7ab24;
+  background-color: #353535;
   /*background-image: url("../images/contact-bg.jpg");*/
   background-position:60% 0;
   background-size:contain;
   background-repeat:no-repeat;
   position: relative;
+
 }
 
 .ear-piece {
@@ -678,7 +679,7 @@ h2 {
 
 #contact h3 {
   text-transform:inherit;
-  color: #373737;
+  color: #FFFFFF;
 }
 
 #contact-section h3 {
@@ -687,7 +688,7 @@ h2 {
 
 #contact address {
   font-size: 18px;
-  color: #373737;
+  color: #FFFFFF;
 }
 
 .contact-text {
@@ -724,17 +725,17 @@ h2 {
 
 #contact-section .btn-primary {
   background-color: #373737;
-  color: #f7ab24;
+  color: #FFFFFF;
   border: none;
   font-size: 24px;
   padding: 6px 42px;
   margin-bottom: 110px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 #contact-section .btn-primary:hover {
-  background-color: #212020;
-  color: #fff
+  background-color: #FFFFFF;
+  color: #353535;
 }
 
 
