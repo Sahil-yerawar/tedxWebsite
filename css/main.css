@@ -108,11 +108,12 @@ h2 {
   margin-bottom: 20px;
   position: relative;
   width: 297px;
+  padding-right: 230px;
 }
 
 .navbar-brand img {
   position: absolute;
-  top: -5px;
+  top: -3px;
 }
 
 .navbar-right {
@@ -164,16 +165,16 @@ h2 {
 }
 
 .fixed-menu .navbar-brand {
-  height: 60px;
+  height: 66px;
   margin-top: 0;
   padding: 0;
   margin-bottom: 0;
-  width: 170px;
+  width: 220px;
 }
 
 .fixed-menu .navbar-brand img {
   height:60px;
-  width:150px;
+  width:220px;
   top: 0;
 }
 
@@ -453,7 +454,7 @@ h2 {
 .even-control-left,
 .even-control-right {
   position: absolute;
-  font-size: 24px;
+  font-size: 35px;
   color: #fff;
   top: 0;
 }
@@ -507,7 +508,7 @@ h2 {
 }
 
 #about .btn-primary {
-  background-color: #137c61;
+  background-color: #242526;
   color: #fff;
   text-transform: capitalize;
   border: none;
@@ -515,7 +516,7 @@ h2 {
 }
 
 #about .btn-primary:hover {
-  background-color: #126d55
+  background-color: #353638
 }
 
 
@@ -733,7 +734,7 @@ h2 {
 }
 
 #contact-section .btn-primary {
-  background-color: #373737;
+  background-color: #1b1b1c;
   color: #FFFFFF;
   border: none;
   font-size: 24px;
@@ -743,8 +744,8 @@ h2 {
 }
 
 #contact-section .btn-primary:hover {
-  background-color: #FFFFFF;
-  color: #353535;
+  background-color: #353638;
+  color: #fff;
 }
 
 
@@ -795,19 +796,19 @@ h2 {
   background-image: url("../images/slider/bg1.jpg");
   background-attachment: fixed;
   max-width: 100%;
-  height: 600px;
+  height: 700px;
 }
 .parallax-img2{
   background-image: url("../images/slider/bg2.jpg");
   background-attachment: fixed;
   max-width: 100%;
-  height: 600px;
+  height: 700px;
 }
 .parallax-img3{
   background-image: url("../images/slider/bg3.jpg");
   background-attachment: fixed;
   max-width: 100%;
-  height: 600px;
+  height: 700px;
 }
 #parallax-base1{
   transform: translateZ(-10px) scale(2);
@@ -816,3 +817,16 @@ h2 {
 .resizer1{
     background-color: #4d4f51;
 }
+.blank-space{
+  width: 247px;
+  background-color: #4d4f51;
+  height: 90px;
+}/*
+.extend-class{
+  width: 544px;
+  height: 90px;
+  background-color: #4d4f51;
+}/*
+.fixed-menu .extend-class{
+  height; 66px;
+}*/

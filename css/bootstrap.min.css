@@ -310,7 +310,7 @@ img {
 
 .img-responsive {
     display: block;
-    max-width: 97%;
+    max-width: 80%;
     height: auto
 }
 
@@ -3763,7 +3763,8 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 
 @media (min-width:768px) {
     .navbar-header {
-        float: left
+        float: left;
+        width: 544px;
     }
 }
 
