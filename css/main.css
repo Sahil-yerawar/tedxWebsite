@@ -460,7 +460,8 @@ h2 {
 }
 
 .even-control-left {
-  right: 3%
+  /*right: 3%*/
+  left; 0;
 }
 
 .even-control-right {
@@ -830,3 +831,6 @@ h2 {
 .fixed-menu .extend-class{
   height; 66px;
 }*/
+.heading{
+  text-align: center;
+}
