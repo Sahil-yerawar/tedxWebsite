@@ -454,14 +454,13 @@ h2 {
 .even-control-left,
 .even-control-right {
   position: absolute;
-  font-size: 25px;
+  font-size: 24px;
   color: #fff;
   top: 0;
 }
 
 .even-control-left {
-  right: 3%;
-  padding-right: 8px;
+  right: 3%
 }
 
 .even-control-right {
@@ -735,7 +734,7 @@ h2 {
 }
 
 #contact-section .btn-primary {
-  background-color: #1b1b1c;
+  background-color: #1b1b1b;
   color: #FFFFFF;
   border: none;
   font-size: 24px;
