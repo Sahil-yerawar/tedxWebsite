@@ -460,7 +460,8 @@ h2 {
 }
 
 .even-control-left {
-  right: 3%
+  right: 3%;
+  padding-right: 8px;
 }
 
 .even-control-right {
