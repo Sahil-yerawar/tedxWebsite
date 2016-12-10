@@ -107,13 +107,13 @@ h2 {
   height: 90px;
   margin-bottom: 20px;
   position: relative;
-  width: 543.7px;
+  width: 297px;
   padding-right: 230px;
 }
 
 .navbar-brand img {
   position: absolute;
-  top: -3px;
+  top: -1px;
 }
 
 .navbar-right {
@@ -136,7 +136,7 @@ h2 {
 .navbar-right .active a {
   background-color: #fff;
   color: #16728f;
-  /*height: 66px;*/
+  height: 110px;
 }
 
 
