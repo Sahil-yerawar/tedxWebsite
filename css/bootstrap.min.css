@@ -3764,7 +3764,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 @media (min-width:768px) {
     .navbar-header {
         float: left;
-        width: 544px;
+        /*width: 544px;*/
     }
 }
 
