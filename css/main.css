@@ -834,3 +834,58 @@ h2 {
 .heading{
   text-align: center;
 }
+#Core1 {
+  position: relative;
+  overflow: hidden;
+  background-color: #4d6712;
+
+}/*
+#Core1 .container{
+  height: 1100px;
+}*/
+.core_heads{/*
+  border-style: solid;
+  border-width: thin;
+  border-color: #FFF;*/
+  margin-left: 450px;
+  margin-right: 450px;
+}
+.profile_pic{
+  display: inline-block;
+  /*border: thin solid #fff;*/
+  background-image: url("../images/Sahil.jpeg");
+  margin-left: 70px;
+  margin-top: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.coords{
+  /*border-style: solid;
+  border-width: thin;
+  border-color: #FFF;
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;*/
+  font-size: 26px;
+
+}
+.row2{
+
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  /*margin-left: 14.5%;*/
+}
+.init_padding{
+  padding-top: 110px
+}
+.separator{
+  height: 2px;
+  background-color: #fff;
+}
