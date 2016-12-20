@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
-@import url(https://fonts.googleapis.com/css?family=Economica:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,200,700);
 
 
@@ -503,8 +503,9 @@ h2 {
 
 #about h2 {
   margin-bottom: 23px;
-  font-family: 'Economica', sans-serif;
-  font-size: 55px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 65px;
+  font-weight: 100;
   text-align: center;
   text-transform: none;
 }
@@ -513,7 +514,10 @@ h2 {
   font-size: 27px;
   font-family: 'Open Sans',sans-serif;
   font-weight: 300;
-  text-align: center;
+  text-align:  justify;;
+  padding-left: 175px;
+  padding-right: 175px;
+
 }
 
 #about .btn-primary {
