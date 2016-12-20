@@ -126,7 +126,7 @@ fs.readFile('studentForm.css', function (err, data) {
 // This route receives the posted form.
 // As explained above, usage of 'body-parser' means
 // that `req.body` will be filled in with the form elements
-app.post('/', function(req, res){
+app.post('/index.html', function(req, res){
   var userName = req.body.user_name;
   var phoneNumber  =req.body.user_contact;
   var email = req.body.user_email;
@@ -136,9 +136,17 @@ app.post('/', function(req, res){
   speaker.phoneNumber = phoneNumber;
   speaker.email = email;
   speaker.referenceLink = referenceLink;
+  fs.readFile('index.html', function (err, data) {
+        res.writeHead(200, {
+            'Content-Type': 'text/html',
+                'Content-Length': data.length
+        });
+        res.write(data);
+        res.end();
+    });/*
   var html = 'Hello: ' + userName + '.<br>'+'phone number: ' + phoneNumber+
              '<a href="/">Try again.</a>';
-  res.send(html);
+  res.send(html);*/
   var url = 'mongodb://localhost:27017/test';
   MongoClient.connect(url, function(err, db) {
   /*assert.equal(null, err);*/
