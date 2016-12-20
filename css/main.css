@@ -11,7 +11,7 @@
 body {
   font-family: 'Dosis', sans-serif;
   font-size: 17px;
-  color: #fff;
+  color: #000000;
   background-color: #4d4f51
 }
 
@@ -405,7 +405,7 @@ h2 {
 *******Event CSS******
 **************************/
 #event {
-  background-color: #3F3F3F;
+  background-color: #c9c9c9;
   /*background-image: url("../images/performar-bg.jpg");*/
   background-position: 50% 0;
   background-size: contain;
@@ -421,7 +421,7 @@ h2 {
 
 
 #event h2 {
-  color: #FFFFFF;
+  color: #000000;
   font-size: 36px;
   font-weight: 300;
   margin-bottom: 40px;
@@ -434,7 +434,7 @@ h2 {
 }
 
 .single-event h4 {
-  color: #FFFFFF;
+  color: #000000;
   font-size: 24px;
   font-weight: 300;
   line-height: 26px;
@@ -457,7 +457,7 @@ h2 {
 .even-control-right {
   position: absolute;
   font-size: 24px;
-  color: #fff;
+  color: #000000;
   top: 0;
 }
 
@@ -476,7 +476,7 @@ h2 {
 **************************/
 
 #about {
-  background-color: #5F6060;
+  background-color: #ededed;
   position: relative;
   width: 100%;
   display: flex;
@@ -672,7 +672,7 @@ h2 {
 **************************/
 
 .contact-section {
-  background-color: #3F3F3F;
+  background-color: #c9c9c9;
   /*background-image: url("../images/contact-bg.jpg");*/
   background-position:60% 0;
   background-size:contain;
@@ -693,7 +693,7 @@ h2 {
 
 #contact h3 {
   text-transform:inherit;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 #contact-section h3 {
@@ -702,7 +702,7 @@ h2 {
 
 #contact address {
   font-size: 18px;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .contact-text {
@@ -759,12 +759,12 @@ h2 {
 **************************/
 
 #footer {
-  background-color: #212121;
+  background-color: #ededed;
   /*background-image: url("../images/footer-bg.jpg");*/
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 20px;
   padding: 35px 0;
 }
