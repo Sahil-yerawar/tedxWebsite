@@ -72,11 +72,28 @@ var removeRestaurants = function(db, callback) {
 
 // instruct the app to use the `bodyParser()` middleware for all routes
 app.use(bodyParser());
-app.use(express.static('public'));
+/*app.use('/static', express.static('public'));*/
+app.use(express.static(__dirname + '/'));
+/*app.use(express.static('css'));
+app.use(express.static('js'));
+app.use(express.static('images'));
+app.use(express.static('fonts'));*/
 
 // A browser's default method is 'GET', so this
 // is the route that express uses when we visit
 // our site initially.
+app.get('/team.html',function(req,res){
+  fs.readFile('team.html',function(err,data){
+    res.writeHead(200, {
+              'Content-Type': 'text/html',
+                  'Content-Length' : data.length
+                });
+                res.write(data);
+                res.end();
+  });
+
+
+});
 app.get('/', function(req, res){
   // The form's action is '/' and its method is 'POST',
   // so the `app.post('/', ...` route will receive the
