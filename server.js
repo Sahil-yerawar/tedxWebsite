@@ -18,30 +18,7 @@ var app = express();
 
 //function to insert an object in a document
 var insertDocument = function(db, callback, object) {
-   db.collection('restaurants').insertOne(object /*{
-      "address" : {
-         "street" : "2 Avenue",
-         "zipcode" : "10075",
-         "building" : "1480",
-         "coord" : [ -73.9557413, 40.7720266 ]
-      },
-      "borough" : "Manhattan",
-      "cuisine" : "Italian",
-      "grades" : [
-         {
-            "date" : new Date("2014-10-01T00:00:00Z"),
-            "grade" : "A",
-            "score" : 11
-         },
-         {
-            "date" : new Date("2014-01-16T00:00:00Z"),
-            "grade" : "B",
-            "score" : 17
-         }
-      ],
-      "name" : "Vella",
-      "restaurant_id" : "41704620"
-   }*/, function(err, result) {
+   db.collection('speakers').insertOne(object, function(err, result) {
 
     console.log("Inserted a document into the speakers collection.");
     callback();
@@ -51,7 +28,7 @@ var insertDocument = function(db, callback, object) {
 
 //function to find all odocuments in a collection
 var findRestaurants = function(db, callback) {
-   var cursor =db.collection('restaurants').find( );
+   var cursor =db.collection('speakers').find( );
    cursor.each(function(err, doc) {
       /*assert.equal(err, null);*/
       if (doc != null) {
@@ -64,14 +41,18 @@ var findRestaurants = function(db, callback) {
 
 //optional function to remove all documents in a function
 var removeRestaurants = function(db, callback) {
-   db.collection('restaurants').deleteMany( {}, function(err, results) {
+   db.collection('speakers').deleteMany( {}, function(err, results) {
       console.log(results);
       callback();
    });
 };
 
 // instruct the app to use the `bodyParser()` middleware for all routes
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({
+   extended: true
+}));
+
+
 /*app.use('/static', express.static('public'));*/
 app.use(express.static(__dirname + '/'));
 /*app.use(express.static('css'));
@@ -130,12 +111,13 @@ app.post('/index.html', function(req, res){
   var userName = req.body.user_name;
   var phoneNumber  =req.body.user_contact;
   var email = req.body.user_email;
-  var referenceLink = req.body.user_references;
+  var referenceLink = req.body.user_referrences;
   var speaker = new Object();
   speaker.name = userName;
   speaker.phoneNumber = phoneNumber;
   speaker.email = email;
   speaker.referenceLink = referenceLink;
+
   fs.readFile('index.html', function (err, data) {
         res.writeHead(200, {
             'Content-Type': 'text/html',
@@ -143,7 +125,7 @@ app.post('/index.html', function(req, res){
         });
         res.write(data);
         res.end();
-    });/* 
+    });/*
   var html = 'Hello: ' + userName + '.<br>'+'phone number: ' + phoneNumber+
              '<a href="/">Try again.</a>';
   res.send(html);*/
