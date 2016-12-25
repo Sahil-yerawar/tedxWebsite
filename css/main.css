@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,700);
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,200,100,700);
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,200,300,500');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400');
 
 
 /*************************
@@ -497,33 +497,40 @@ h2 {
   padding-top: 30px;
 }
 
-#about h2, #apply h2, #event h2, .contact-section h2 {
+#about h2, #applyheading, #event h2, .contact-section h2 {
+  max-width: 80%;
   margin-bottom: 50px;
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 60px;
-  margin-top: auto;
+  margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
-  font-weight: 100;
-  text-align: center;
+  font-weight: 200;
   text-transform: none;
+  text-align: center;
+}
+
+#event h2 {
+    padding-top: 0;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 
 .about-content p, .apply-content p {
-  max-width: 70%;
+  max-width: 60%;
   margin: 40px;
   font-size: 20px;
   font-family: 'Open Sans',sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   text-align: center;
   position: relative;
-  width: auto;
   margin: 0 auto;
+  width: auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  padding: 20px;
 }
 
 .apply-content {
@@ -546,25 +553,31 @@ h2 {
   background-color: #353638
 }
 
-#applybutton {
+.ButtonApply button{
+    padding: 10px 20px;
+    margin: auto;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    text-transform: none;
     max-width: 50%;
     background-color: inherit;
     border-style: solid;
     border-color: rgba(0,0,0,0.3);
     border-width: thin;
     border-radius: 5px;
-    padding: 30px 70px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     color: rgb(20,20,20);
     font-weight: 200;
     font-size: 35px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    margin: 10px;
+
 }
 
-#applybutton:hover{
+
+.ButtonApply button:hover{
     /*background-color: rgba(100,100,100,0.5);*/
     box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
     border-style: solid;
@@ -771,20 +784,20 @@ h2 {
 **************************/
 
 #footer {
-  background-color: #3a3a3a;
+  background-color: rgba(30,30,30,1);
   /*background-image: url("../images/footer-bg.jpg");*/
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #101010;
-  font-size: 19px;
+  color: rgba(255,255,255,.3);
+  font-size: 12px;
   padding: 8px;
   font-family: "Roboto";
   font-weight: 100;
 }
 
 #footer:hover {
-  color: #000000;
+  color: rgba(255,255,255,.6);
   text-shadow: 0px 0px 1px #303030;
 }
 /*

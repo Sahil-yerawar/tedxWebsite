@@ -437,7 +437,9 @@
    }
 
   #footer {
-    font-size: 14px;
+      font-size: 10px;
+      max width: 80%;
+      padding: 2px;
   }
 
   .watch, .guitar, .guitar2, .twit, .light, .ear-piece {
