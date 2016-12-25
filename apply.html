@@ -15,23 +15,35 @@
 
       <fieldset>
         <!--<legend><span class="number">1</span>Basic Information</legend>-->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name">
+        <div class="AppName1">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="first_name">
+        </div>
+        <div class="AppName2">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="last_name">
+        </div>
 
-        <label for="mail">Email:</label>
-        <input type="email" id="mail" name="user_email">
+        <div class="Inline">
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email">
 
-        <label for="phone_number">Phone Number:</label>
-        <input type="tel" id="phone_number" name="user_contact" maxlength="11">
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="user_contact" maxlength="11">
 
-        <label for="description">A few lines about yourself:</label>
-        <textarea id="description" name="user_description"></textarea>
+            <label for="description">A few lines about yourself:</label>
+            <textarea id="description" name="user_description"></textarea>
 
-        <label for="links">Referral links:</label>
-        <input type="url" id="links" name="user_references" >
+            <label for="idea">A brief description of your idea:</label>
+            <textarea id="idea" name="user_idea"></textarea>
+
+            <label for="links">Referral links:</label>
+            <input type="url" id="links" name="user_references" >
+        </div>
       </fieldset>
-        <button type="submit">Apply for TEDxIITH</button>
-      </fieldset>
+      <div class="applyButton">
+        <button type="submit">Apply for TEDxIITHyderabad</button>
+    </div>
 
 
     </form>
