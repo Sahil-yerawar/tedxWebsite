@@ -479,48 +479,30 @@ h2 {
 
 #about {
   background-color: #fafafa;
-  position: relative;
   width: 100%;
-  display: flex;
+  display: block;
+  margin: 0 auto;
 }
 
-.guitar2 {
-  top: 0;
-  width: 50%;
-}
 
-.guitar2 img {
-  padding-top: 3%;
-}
-
-.about-content {
+.about-content{
   width: 100%;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.about-content1 {
-  padding: 70px 70px 110px;
-
-}
 
 .about-content2 {
-  padding: 70px 70px 110px;
   background-color: #ededed;
+  background-size: cover;
+  width: auto;
+  padding-top: 30px;
 }
-
-.about-content3 {
-  padding: 70px 70px 110px;
-}
-
-
 
 #about h2, #apply h2, #event h2, .contact-section h2 {
-  margin-top: 30px;
   margin-bottom: 50px;
   margin-left: 20px;
   margin-right: 20px;
+  padding-top: 60px;
+  margin-top: auto;
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
   font-weight: 100;
@@ -530,18 +512,26 @@ h2 {
 
 
 .about-content p, .apply-content p {
+  max-width: 70%;
   margin: 40px;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Open Sans',sans-serif;
   font-weight: 300;
   text-align: center;
-  padding-left: 175px;
-  padding-right: 175px;
-
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding: 20px;
 }
 
-#apply {
+.apply-content {
     background-color: white; rgba(140,140,140,1);
+    background-size: cover;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 #about .btn-primary {
@@ -557,6 +547,7 @@ h2 {
 }
 
 #applybutton {
+    max-width: 50%;
     background-color: inherit;
     border-style: solid;
     border-color: rgba(0,0,0,0.3);

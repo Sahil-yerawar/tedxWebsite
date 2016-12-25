@@ -211,7 +211,8 @@
 
   #event h2,
   #about h2,
-  #sponsor h2 {
+  #sponsor h2,
+  #contact h2 {
     font-size: 30px;
   }
 
@@ -271,7 +272,6 @@
 
   .about-content {
     width: 100%;
-    padding: 70px 25px 110px;
   }
 
 }
@@ -377,21 +377,23 @@
     margin-bottom: 40px;
   }
 
-  .about-content {
-    width: 100%;
-    padding: 70px 30px 110px;
-  }
-
   #event h2,
   #about h2,
+  #apply h2,
   #sponsor h2 {
     font-size: 30px;
   }
 
-  .about-content p,
+  #applybutton {
+      font-size: 25px;
+      padding: 10px 20px;
+  }
+
+  .about-content p, .apply-content p,
   #twitter-feed .item a,
   #twitter-feed .item p {
     font-size: 15px;
+    max-width: 90%
   }
 
   .twitter-control-left,
