@@ -315,11 +315,11 @@ img {
 
 .img-responsive {
     display: block;
-    max-width: 80%;
+    max-width: 90%;
     height: auto
 }
 
-.thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img, .carousel-inner1>.item1>img, .carousel-inner1>.item1>a>img {
     display: block;
     max-width: 100%;
     height: auto
@@ -5678,49 +5678,64 @@ button.close {
     overflow: hidden;
     width: 100%
 }
+.carousel-inner1 {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
 
-.carousel-inner>.item {
+.carousel-inner>.item  {
     display: none;
     position: relative;
     -webkit-transition: .6s ease-in-out left;
-    transition: .6s ease-in-out left
+    transition: .6s ease-in-out left;
+
+}
+.carousel-inner1>.item1 {
+    display: none;
+    position: relative;
+    -webkit-transition: .6s ease-in-out left;
+    transition: .6s ease-in-out left;
+    width: 1008px;
+    margin: auto;
 }
 
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.carousel-inner>.item>img, .carousel-inner>.item>a>img, .carousel-inner1>.item1>img, .carousel-inner1>.item1>a>img {
     line-height: 1
 }
 
-.carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
+.carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev, .carousel-inner1>.active, .carousel-inner1>.next, .carousel-inner1>.prev {
     display: block
 }
 
-.carousel-inner>.active {
+.carousel-inner>.active, .carousel-inner1>.active {
     left: 0
 }
 
-.carousel-inner>.next, .carousel-inner>.prev {
+.carousel-inner>.next, .carousel-inner>.prev, .carousel-inner1>.next, .carousel-inner1>.prev {
     position: absolute;
     top: 0;
     width: 100%
 }
 
-.carousel-inner>.next {
+.carousel-inner>.next, .carousel-inner1>.next {
     left: 100%
 }
 
-.carousel-inner>.prev {
+.carousel-inner>.prev, .carousel-inner1>.prev {
     left: -100%
 }
 
-.carousel-inner>.next.left, .carousel-inner>.prev.right {
+.carousel-inner>.next.left, .carousel-inner>.prev.right, .carousel-inner1>.next.left, .carousel-inner1>.prev.right {
     left: 0
 }
 
-.carousel-inner>.active.left {
+.carousel-inner>.active.left, .carousel-inner1>.active.left {
     left: -100%
 }
 
-.carousel-inner>.active.right {
+.carousel-inner>.active.right, .carousel-inner1>.active.right {
     left: 100%
 }
 

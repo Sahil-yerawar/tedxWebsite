@@ -212,12 +212,11 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-9">
 					<div id="event-carousel" class="carousel slide" data-interval="false">
-            <a class="even-control-left" href="#event-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+
 
             <h2 class="heading">Our Previous Speakers</h2>
-												<a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
-						<div class="carousel-inner">
-							<div class="item active">
+																	<div class="carousel-inner1">
+							<div class="item1 active">
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-event">
@@ -244,7 +243,7 @@
               </div>
 
 
-							<div class="item">
+							<div class="item1">
 								<div class="row">
                   <div class="col-sm-4">
 										<div class="single-event">
@@ -277,6 +276,9 @@
 								</div>
 							</div>
 						</div>
+              <a class="even-control-left" href="#event-carousel" data-slide="prev"><div style="margin-top: 220px"><i class="fa fa-angle-left" style="top: 50%"></i></div></a>
+              <a class="even-control-right" href="#event-carousel" data-slide="next"><div style="margin-top: 220px"><i class="fa fa-angle-right" style="top: 50%"></i></div></a>
+
 					</div>
 				</div><!--
 				<div class="guitar">
@@ -285,6 +287,22 @@
 			</div>
 		</div>
 	</section><!--/#event-->
+  <script>
+$(document).ready(function(){
+    // Activate Carousel
+    $("#event-carousel").carousel();
+
+    // Enable Carousel Indicators
+
+    // Enable Carousel Controls
+    $(".left").click(function(){
+        $("#event-carousel").carousel("prev");
+    });
+    $(".right").click(function(){
+        $("#event-carousel").carousel("next");
+    });
+});
+</script>
 
     <section id="apply">
       <!--<div class="guitar2">

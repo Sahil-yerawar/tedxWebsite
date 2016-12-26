@@ -458,9 +458,13 @@ h2 {
 .even-control-left,
 .even-control-right {
   position: absolute;
-  font-size: 28px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5%;
+  font-size: 40px;
   color: #000000;
-  top: 0px;
+  text-align: center;
 
 }
 
@@ -471,6 +475,7 @@ h2 {
 
 .even-control-right {
   right: 0;
+  left: auto;
 }
 
 
@@ -607,7 +612,7 @@ h2 {
   top:-42%;
 }
 
-#twitter-feed .item {
+  #twitter-feed .item {
   text-align: center;
 }
 
