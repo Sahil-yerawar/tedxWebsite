@@ -108,7 +108,8 @@ fs.readFile('studentForm.css', function (err, data) {
 // As explained above, usage of 'body-parser' means
 // that `req.body` will be filled in with the form elements
 app.post('/index.html', function(req, res){
-  var userName = req.body.user_name;
+  var firstName = req.body.first_name;
+  var lastName = req.body.last_name;
   var phoneNumber  =req.body.user_contact;
   var email = req.body.user_email;
   var description = req.body.user_description;
@@ -116,7 +117,8 @@ app.post('/index.html', function(req, res){
   var idea = req.body.user_idea;
   var speaker = new Object();
 
-  speaker.name = userName;
+  speaker.firstName = firstName;
+  speaker.lastName = lastName;
   speaker.phoneNumber = phoneNumber;
   speaker.email = email;
   speaker.description = description;
