@@ -938,4 +938,11 @@ h2 {
   .narrow{
     display: block;
   }
+  .even-control-left, .even-control-right{
+    position: absolute;
+    top: 0;
+    color: #000000;
+    text-align: center;
+    font-size: 22px;
+  }
 }
