@@ -925,3 +925,14 @@ h2 {
 .adjustor{
   float: left;
 }
+.narrow{
+  display: none;
+}
+@@media only screen and (max-width: 500px) {
+  .wide{
+    display: none;
+  }
+  .narrow{
+    display: block;
+  }
+}
