@@ -928,6 +928,9 @@ h2 {
 .narrow{
   display: none;
 }
+.wide{
+  display: block;
+}
 @media only screen and (max-width: 500px) {
   .wide{
     display: none;
