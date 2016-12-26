@@ -111,12 +111,17 @@ app.post('/index.html', function(req, res){
   var userName = req.body.user_name;
   var phoneNumber  =req.body.user_contact;
   var email = req.body.user_email;
-  var referenceLink = req.body.user_referrences;
+  var description = req.body.user_description;
+  var referenceLink = req.body.user_references;
+  var idea = req.body.user_idea;
   var speaker = new Object();
+
   speaker.name = userName;
   speaker.phoneNumber = phoneNumber;
   speaker.email = email;
+  speaker.description = description;
   speaker.referenceLink = referenceLink;
+  speaker.idea = idea;
 
   fs.readFile('index.html', function (err, data) {
         res.writeHead(200, {

@@ -458,14 +458,15 @@ h2 {
 .even-control-left,
 .even-control-right {
   position: absolute;
-  font-size: 24px;
+  font-size: 28px;
   color: #000000;
-  top: 0;
+  top: 0px;
+
 }
 
 .even-control-left {
   /*right: 3%*/
-  left; 0;
+  left: 0;
 }
 
 .even-control-right {
