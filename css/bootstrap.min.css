@@ -5684,6 +5684,21 @@ button.close {
     width: 90%;
     margin: auto;
 }
+@media only screen and (max-width: 500px) {
+
+  .carousel-inner1 {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+  }
+
+  .img-responsive{
+    display: block;
+    max-height: 40%;
+    width: 100%;
+  }
+}
 
 .carousel-inner>.item  {
     display: none;

@@ -940,9 +940,10 @@ h2 {
   }
   .even-control-left, .even-control-right{
     position: absolute;
-    top: 0;
+    font-size: 24px;
     color: #000000;
-    text-align: center;
-    font-size: 22px;
+    width: auto;
+    bottom: auto;
+    top: 0;
   }
 }
