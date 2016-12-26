@@ -5684,14 +5684,14 @@ button.close {
     width: 90%;
     margin: auto;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 
 
 
   .img-responsive{
     display: block;
     height: auto;
-    max-width: 229px;
+    max-width: 100%;
   }
 }
 
