@@ -829,7 +829,7 @@ h2 {
 .parallax-img1{
   background-image: url("../images/slider/TEDx2k15Team.jpg");
   background-attachment: fixed;
-  max-width: 100%;
+  width: 100vw;
   height: 500px;
 }
 .parallax-img2{
