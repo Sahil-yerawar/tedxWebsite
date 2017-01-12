@@ -5715,11 +5715,11 @@ button.close {
     line-height: 1
 }
 
-.carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev, .carousel-inner1>.active, .carousel-inner1>.next, .carousel-inner1>.prev {
+.carousel-inner>.active, .carousel-inner>.active1, .carousel-inner>.next, .carousel-inner>.prev, .carousel-inner1>.active, .carousel-inner1>.next, .carousel-inner1>.prev {
     display: block
 }
 
-.carousel-inner>.active, .carousel-inner1>.active {
+.carousel-inner>.active, .carousel-inner>.active1,.carousel-inner1>.active {
     left: 0
 }
 
@@ -5741,11 +5741,11 @@ button.close {
     left: 0
 }
 
-.carousel-inner>.active.left, .carousel-inner1>.active.left {
+.carousel-inner>.active.left,.carousel-inner>.active1.left,.carousel-inner1>.active.left {
     left: -100%
 }
 
-.carousel-inner>.active.right, .carousel-inner1>.active.right {
+.carousel-inner>.active.right, .carousel-inner>.active1.left,.carousel-inner1>.active.right {
     left: 100%
 }
 
