@@ -46,6 +46,9 @@ h2 {
   font-size: 36px
 }
 
+.lowercase{
+  text-transform: none;
+}
 .navbar-toggle {
   margin-top: 12px
 }
@@ -173,7 +176,7 @@ h2 {
 
 .fixed-menu .navbar-brand img {
   height:66px;
-  
+
   top: 0;
 }
 
@@ -199,12 +202,12 @@ h2 {
 #main-slider
 .carousel-caption {
   background: none repeat scroll 0 0 #000000;
-  bottom: 14%;
-  float: left;
-  left: 0;
+  bottom: 10%;
+  float: right;
+  right: 0;
   opacity: 0.8;
   padding:10px 60px 35px;
-  right: inherit;
+  left:auto;
   text-transform: uppercase;
   color: #fff;
   text-align: left;
@@ -213,18 +216,18 @@ h2 {
 
 #main-slider
 .carousel-caption h2 {
-  font-size: 38px;
+  font-size: 26px;
 
 }
 
 #main-slider
 .carousel-caption h4 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 #main-slider
 .carousel-caption a {
-  font-size: 22px;
+  font-size: 14px;
   color: #2da1c5
 }
 
@@ -259,6 +262,59 @@ h2 {
   background-color:#fff;
   border: 1px solid #fff;
 }
+
+.resizer1
+.carousel-caption {
+  background: none repeat scroll 0 0 #000000;
+  bottom: 10%;
+  float: right;
+  right: 0;
+  opacity: 0.8;
+  padding:10px 60px 35px;
+  left:auto;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: left;
+}
+
+
+.resizer1
+.carousel-caption h2 {
+  font-size: 26px;
+
+}
+
+.resizer1
+.carousel-caption h4 {
+  font-size: 18px;
+}
+
+.resizer1
+.carousel-caption a {
+  font-size: 14px;
+  color: #2da1c5
+}
+
+.resizer1
+.carousel-caption a:hover {
+  color: #2588a6
+}
+
+.resizer1
+.carousel-caption a:hover i {
+  margin-left: 35px
+}
+
+.resizer1
+.carousel-caption a i {
+  margin-left: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 
 /*************************
 *******Explore CSS******
@@ -827,21 +883,21 @@ h2 {
   transform: translateZ(-800px);
 }
 .parallax-img1{
-  background-image: url("../images/slider/TEDx2k15Team.jpg");
+  background-image: url("../images/slider/TEDxTeam2.jpg");
   background-attachment: fixed;
   background-size:100%;
   width: 100vw;
   height: 80vh;
 }
 .parallax-img2{
-  background-image: url("../images/slider/TEDx2k15Host.jpg");
+  background-image: url("../images/slider/TEDxHost2.jpg");
   background-attachment: fixed;
   background-size:100%;
   max-width: 100vw;
   height: 80vh;
 }
 .parallax-img3{
-  background-image: url("../images/slider/TEDx2k15Audience.jpg");
+  background-image: url("../images/slider/TEDxAudience2.jpg");
   background-attachment: fixed;
   background-size:100%;
   max-width: 100vw;
