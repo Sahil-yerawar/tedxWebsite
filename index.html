@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,10 @@
     <meta property="og:type" content="website">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="../jquery.mCustomScrollbar.css">
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
@@ -24,57 +25,61 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+</head>
+<!--/head-->
 
-<body><!--
+<body>
+    <!--
   <div class="parallax">
   <div class="parallax__layer parallax__layer__back">-->
 
-      <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-        fjs.parentNode.insertBefore(js, fjs);
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
 
-	<header id="header" role="banner">
-		<div class="main-nav">
-			<div class="container">
-		        <div class="row1">
-		            <div class="navbar-header">
-		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <header id="header" role="banner">
+        <div class="main-nav">
+            <div class="container">
+                <div class="row1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 		                    <span class="sr-only">Toggle navigation</span>
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-                    <div class="extend-class">
-		                <div class="navbar-brand">
-                      <a class="img-responsive" href="index.html">
-		                	<img class="img-responsive" src="images/Logo.png" alt="logo">
-		                </a>
-                  </div>
-                  </div>
-		            </div>
+                        <div class="extend-class">
+                            <div class="navbar-brand">
+                                <a class="img-responsive" href="index.html">
+                                    <img class="img-responsive" src="images/Logo.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-		            <div class="collapse navbar-collapse">
+                    <div class="collapse navbar-collapse">
 
-		                <ul class="nav navbar-nav navbar-right">
-		                    <li class="scroll active"><a href="#home">Home</a></li>
-		                    <!--<li class="scroll"><a href="#explore">Explore</a></li>-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="scroll active"><a href="#home">Home</a></li>
+                            <!--<li class="scroll"><a href="#explore">Explore</a></li>-->
                             <li class="scroll"><a href="#about">About</a></li>
                             <li class="scroll"><a href="#event">Event</a></li>
-		                    <!--<li class="no-scroll"><a href="team.html" target="_self">Team</a></li>-->
-		                    <li class="scroll"><a href="#apply">Apply</a></li>
-		                    <li class="scroll"><a href="#contact">Contact</a></li>
-		                </ul>
-		            </div>
-		        </div>
-	        </div>
+                            <!--<li class="no-scroll"><a href="team.html" target="_self">Team</a></li>-->
+                            <li class="scroll"><a href="#apply">Apply</a></li>
+                            <li class="scroll"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -82,49 +87,107 @@
     <!--/#header-->
 
     <section id="home">
-      <div class="resizer1">
-		<div id="main-slider" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#main-slider" data-slide-to="0" class="active"></li>
-				<li data-target="#main-slider" data-slide-to="1"></li>
-				<li data-target="#main-slider" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="item active">
-          <div class="parallax-img1"></div>
-					<!--<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">-->
-					<!--<div class="carousel-caption">
+
+        <div class="resizer1 wide">
+            <div id="main-slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#main-slider" data-slide-to="0" class="active1"></li>
+                    <li data-target="#main-slider" data-slide-to="1"></li>
+                    <li data-target="#main-slider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="parallax-img1"></div>
+                        <!--<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">-->
+                        <!--<div class="carousel-caption">
+
 						<h2>register for our next event </h2>
 						<h4>full event package only @$199</h4>
 						<a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
 					</div>-->
-				</div>
-				<div class="item">
-					<div class="parallax-img2"></div>
-          <!--<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">-->
-					<!--<div class="carousel-caption">
+                    </div>
+                    <div class="item">
+                        <div class="parallax-img2"></div>
+                        <!--<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">-->
+                        <!--<div class="carousel-caption">
 						<h2>register for our next event </h2>
 						<h4>full event package only @$199</h4>
 						<a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
 					</div>-->
-				</div>
-				<div class="item">
-          <div class="parallax-img3"></div>
-					<!--<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">-->
-					<!--<div class="carousel-caption">
+                    </div>
+                    <div class="item">
+                        <div class="parallax-img3"></div>
+                        <!--<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">-->
+                        <!--<div class="carousel-caption">
 						<h2>register for our next event </h2>
 						<h4>full event package only @$199</h4>
 						<a href="#contact" >GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
 					</div>-->
-				</div>
-			</div>
-		</div>
-  </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-caption wide">
+                <h2> Latest News </h2>
+                <h4>Hear what's happening in TEDx IIT-Hyderabad</h4>
+                <a href="#contact">Check it out<i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="resizer1 narrow ">
+            <div id="main-slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#main-slider" data-slide-to="0" class="active1"></li>
+                    <li data-target="#main-slider" data-slide-to="1"></li>
+                    <li data-target="#main-slider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="parallax-img1 narrow"></div>
+                        <!--<img class="img-responsive" src="images/slider/bg1.jpg" alt="slider">-->
+                        <!--<div class="carousel-caption">
+
+        <h2>register for our next event </h2>
+        <h4>full event package only @$199</h4>
+        <a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+      </div>-->
+
+                    </div>
+                    <div class="item">
+                        <div class="parallax-img2 narrow"></div>
+                        <!--<img class="img-responsive" src="images/slider/bg2.jpg" alt="slider">-->
+                        <!--<div class="carousel-caption">
+        <h2>register for our next event </h2>
+        <h4>full event package only @$199</h4>
+        <a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+      </div>-->
+
+                    </div>
+                    <div class="item">
+                        <div class="parallax-img3 narrow"></div>
+                        <!--<img class="img-responsive" src="images/slider/bg3.jpg" alt="slider">-->
+                        <!--<div class="carousel-caption">
+        <h2>register for our next event </h2>
+        <h4>full event package only @$199</h4>
+        <a href="#contact" >GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
+      </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-caption wide">
+                <h2> Latest News </h2>
+                <h4>Hear what's happening in TEDx IIT-Hyderabad</h4>
+                <a href="#contact">Check it out<i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+
     </section>
-	<!--/#home--><!--
+    <!--/#home-->
+    <!--
 </div>
 <div class="parallax__layer parallax__layer--base">-->
-	<!--<section id="explore">
+    <!--<section id="explore">
 		<div class="container">
 			<div class="row">
 				<div class="watch">
@@ -160,277 +223,344 @@
 		</div>
 	</section><!--/#explore-->
 
-  <section id="about">
-            <!--<div class="guitar2">
+    <section id="about">
+        <!--<div class="guitar2">
               <img class="img-responsive" src="images/guitar2.jpg" alt="guitar">
             </div>-->
         <div class="about-content">
             <div class="about-content1">
-                  <h2>What is TEDx?</h2>
-                  <p>In the spirit of ideas worth spreading, TED has created a program called TEDx.
-                      TEDx is a program of local, self-organized events that bring people together to share a TED-like experience.
-                       Our event is called TEDxIITHyderabad, where x = independently organized TED event.
-                       At our TEDxIITHyderabad event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group.
-                       The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.
-                   </p>
-                  <div style="height: 50px"></div>
+                <h2>What is TEDx?</h2>
+                <p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxIITHyderabad, where x =
+                    independently organized TED event. At our TEDxIITHyderabad event, TEDTalks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program,
+                    but individual TEDx events, including ours, are self-organized.
+                </p>
+                <div style="height: 50px"></div>
             </div>
             <div class="about-content2">
-                  <h2>Why is IIT-Hyderabad organising TEDxIITHyderabad?</h2>
-                  <p>Indian Institute of Technology, Hyderabad, one of the premier educational institutions in India is hosting
-                      the third edition of TEDxIITHyderabad. Though we are young, we have a great vision, agility, commitment and
-                      energy to create an innovative research environment.
-                  </br></br>
-                      At TEDxIITHyderabad, we believe it is important to invest in areas where the local community finds its relevance.
-                      Consequently, TEDxIITHyderabad is an effort to bring together and showcase the bright minds from the local scene-
-                      we are continuously in awe of how much Hyderabad has to offer in terms of the quality of ideas and number of people
-                      ready to share their stories with the world.As an educational institution, we want to leverage ideas, technologies, design and education
-                      to help create a better future, which is is what TED stands for.
-                  </br></br>
-                      The thought behind an event of this magnitude is not for money or for popularity, but to make a difference,
-                      to give back to the society; and we found that TEDx provides the perfect environment.
-                      The TED and TEDx Community is a large and a dynamic network, just being of a part of this network is a source of inspiration.
-                      Associating with TEDx provides us the framework and visibility across the globe that makes such an event possible.
+                <h2>Why is IIT-Hyderabad organising TEDxIITHyderabad?</h2>
+                <p>Indian Institute of Technology, Hyderabad, one of the premier educational institutions in India is hosting the third edition of TEDxIITHyderabad. Though we are young, we have a great vision, agility, commitment and energy to create an
+                    innovative research environment.
+                    </br>
+                    </br>
+                    At TEDxIITHyderabad, we believe it is important to invest in areas where the local community finds its relevance. Consequently, TEDxIITHyderabad is an effort to bring together and showcase the bright minds from the local scene- we are continuously in
+                    awe of how much Hyderabad has to offer in terms of the quality of ideas and number of people ready to share their stories with the world.As an educational institution, we want to leverage ideas, technologies, design and education to
+                    help create a better future, which is is what TED stands for.
+                    </br>
+                    </br>
+                    The thought behind an event of this magnitude is not for money or for popularity, but to make a difference, to give back to the society; and we found that TEDx provides the perfect environment. The TED and TEDx Community is a large and a dynamic network,
+                    just being of a part of this network is a source of inspiration. Associating with TEDx provides us the framework and visibility across the globe that makes such an event possible.
                 </p>
             </div>
-                    <div style="height: 50px"></div>
+            <div style="height: 50px"></div>
             <div class="about-content3">
-                  <h2>Launching TEDxIITHyderabad 2017.</h2>
-                  <p>At IIT- Hyderabad, believe in transforming ideas into reality. And here we are taking a significant step towards this mission – TEDxIITHyderabad 2017.
-                    TEDxIITHyderabad is an annual programme aimed at educating, inspiring and connecting great minds. TEDxIITHyderabad 2017, a journey in itself, began with the search for a theme. The theme for this edition is “Tomorrow Starts Now”.
-                    The event will be a day long feature where the speakers go live along with presentations of TED Talks Videos.
-                  </p>
+                <h2>Launching TEDxIITHyderabad 2017.</h2>
+                <p>At IIT- Hyderabad, believe in transforming ideas into reality. And here we are taking a significant step towards this mission – TEDxIITHyderabad 2017. TEDxIITHyderabad is an annual programme aimed at educating, inspiring and connecting
+                    great minds. TEDxIITHyderabad 2017, a journey in itself, began with the search for a theme. The theme for this edition is “Tomorrow Starts Now”. The event will be a day long feature where the speakers go live along with presentations
+                    of TED Talks Videos.
+                </p>
             </div>
         </div>
 
 
 
-  </section><!--/#about-->
 
-	<section id="event" class="wide">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-9">
-					<div id="event-carousel" class="carousel slide wide" data-interval="false">
+    </section>
+    <!--/#about-->
 
-
-            <h2 class="heading">Our Previous Speakers</h2>
-																	<div class="carousel-inner1">
-							<div class="item1 active">
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
-											<h4>Subhash Chandra</h4>
-											<h5>Owner, MR Prductions</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
-											<h4>Dr Neeraj Jain</h4>
-											<h5>Professor, National Brain Research center, Manesar</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
-											<h4>Dr V.K Saraswat</h4>
-											<h5>former DRDO chief</h5>
-										</div>
-									</div>
-                </div>
-              </div>
+    <section id="event" class="wide"><!--
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-9">-->
+                    <!--<div id="event-carousel" class="carousel slide wide" data-interval="false">
 
 
-							<div class="item1">
-								<div class="row">
-                  <div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
-											<h4>Dr Ananda Shankar Jayant</h4>
-											<h5>Classical dancer</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
-											<h4>Dr V Rao</h4>
-											<h5>OncoLogist</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
-											<h4>Anuj Gurwara</h4>
-											<h5>Playback Singer</h5>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-              <a class="even-control-left" href="#event-carousel" data-slide="prev"><div style="margin-top: 220px"><i class="fa fa-angle-left" style="top: 50%"></i></div></a>
-              <a class="even-control-right" href="#event-carousel" data-slide="next"><div style="margin-top: 220px"><i class="fa fa-angle-right" style="top: 50%"></i></div></a>
+                        <h2 class="heading">Our Previous Speakers</h2>
+                        <div class="carousel-inner1">
+                            <div class="item1 active">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
+                                            <h4>Subhash Chandra</h4>
+                                            <h5 class="lowercase">Owner, MR Prductions</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
+                                            <h4>Dr Neeraj Jain</h4>
+                                            <h5 class="lowercase">Professor, National Brain Research center, Manesar</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
+                                            <h4>Dr V.K Saraswat</h4>
+                                            <h5 class="lowercase">Former DRDO chief</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-					</div>
-          <!-- for Mobile and lower pixel resolution-->
-          <h2 class="heading narrow">Our Previous Speakers</h2>
-          <div class="narrow list">
-            <ul id="prev_speakers_list" style="list-style: none; padding-left: 0">
-            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
-              <div class="single-event">
-                <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
-                <h4>Subhash Chandra</h4>
-                <h5>Owner, MR Prductions</h5>
-              </div></li>
-              <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
-                <div class="single-event">
-                  <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
-                  <h4>Dr Neeraj Jain</h4>
-                  <h5>Professor, National Brain Research center, Manesar</h5>
-                </div></li>
-                <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
-                  <div class="single-event">
-                    <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
-                    <h4>Dr V.K Saraswat</h4>
-                    <h5>former DRDO chief</h5>
-                  </div></li>
-                  <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
-                    <div class="single-event">
-											<img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
-											<h4>Dr Ananda Shankar Jayant</h4>
-											<h5>Classical dancer</h5>
-										</div></li>
-                    <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
-                      <div class="single-event">
-  											<img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
-  											<h4>Dr V Rao</h4>
-  											<h5>OncoLogist</h5>
-  										</div></li>
-                      <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
-                        <div class="single-event" style="padding-left: 0px; padding-right:0px">
-    											<img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
-    											<h4>Anuj Gurwara</h4>
-    											<h5>Playback Singer</h5>
-    										</div></li>
-            </ul>
-          </div>
-				</div><!--
-				<div class="guitar">
+
+                            <div class="item1">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
+                                            <h4>Dr Ananda Shankar Jayant</h4>
+                                            <h5 class="lowercase">Classical dancer</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
+                                            <h4>Dr V Rao</h4>
+                                            <h5 class="lowercase">OncoLogist</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
+                                            <h4>Anuj Gurwara</h4>
+                                            <h5 class="lowercase">Playback Singer</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="even-control-left" href="#event-carousel" data-slide="prev">
+                            <div style="margin-top: 220px"><i class="fa fa-angle-left" style="top: 50%"></i></div>
+                        </a>
+                        <a class="even-control-right" href="#event-carousel" data-slide="next">
+                            <div style="margin-top: 220px"><i class="fa fa-angle-right" style="top: 50%"></i></div>
+                        </a>
+
+                    </div>-->
+
+                    <div class="carousel1 slide article-slide" id="article-photo-carousel" data-interval="false">
+                        <h2 class="heading">Our Previous Speakers</h2>
+
+                            <div class="carousel-inner cont-slider">
+
+                            <div class="item active">
+                                <img alt="" title="" src="images/event/samuel-l-jackson.jpg" style="width=100%">
+                            </div>
+                            <div class="item">
+                                <img alt="" title="" src="http://placehold.it/1356x400" style="width=100%">
+                            </div>
+                            <div class="item">
+                                <img alt="" title="" src="images/event/samuel-l-jackson.jpg" style="width=100%">
+                            </div>
+                            <div class="item">
+                                <img alt="" title="" src="http://placehold.it/1356x400" style="width=100%">
+                            </div>
+                            <div class="item">
+                                <img alt="" title="" src="images/event/samuel-l-jackson.jpg" style="width=100%">
+                            </div>
+                        </div>
+
+                        <ol class="carousel-indicators">
+                            <div class="indicator_row">
+                            <li class="active" data-slide-to="0" data-target="#article-photo-carousel">
+                                <img alt="" src="images/event/samuel-l-jacksonsmall.jpg">
+                            </li>
+                            <li class="" data-slide-to="1" data-target="#article-photo-carousel">
+                                <img alt="" src="http://placehold.it/250x180">
+                            </li>
+                            <li class="" data-slide-to="2" data-target="#article-photo-carousel">
+                                <img alt="" src="images/event/samuel-l-jacksonsmall.jpg">
+                            </li>
+                            <li class="" data-slide-to="3" data-target="#article-photo-carousel">
+                                <img alt="" src="http://placehold.it/250x180">
+                            </li>
+                            <li class="" data-slide-to="4" data-target="#article-photo-carousel">
+                                <img alt="" src="images/event/samuel-l-jacksonsmall.jpg">
+                            </li>
+                          </div>
+                        </ol>
+
+
+                      </div>
+                    <!-- for Mobile and lower pixel resolution-->
+                    <h2 class="heading narrow">Our Previous Speakers</h2>
+                    <div class="narrow list">
+                        <ul id="prev_speakers_list" style="list-style: none; padding-left: 0">
+                            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
+                                    <h4>Subhash Chandra</h4>
+                                    <h5 class="lowercase">Owner, MR Prductions</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
+                                    <h4>Dr Neeraj Jain</h4>
+                                    <h5 class="lowercase">Professor, National Brain Research center, Manesar</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
+                                    <h4>Dr V.K Saraswat</h4>
+                                    <h5 class="lowercase">Former DRDO chief</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
+                                    <h4>Dr Ananda Shankar Jayant</h4>
+                                    <h5 class="lowercase">Classical dancer</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
+                                    <h4>Dr V Rao</h4>
+                                    <h5 class="lowercase">OncoLogist</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: -5px; padding-right:0px">
+                                <div class="single-event" style="padding-left: 0px; padding-right:0px">
+                                    <img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
+                                    <h4>Anuj Gurwara</h4>
+                                    <h5 class="lowercase">Playback Singer</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                <!--</div>-->
+                <!--
+
+          <div class="guitar">
 					<img class="img-responsive" src="images/guitar.png" alt="guitar">
 				</div>-->
-			</div>
-		</div>
-	</section><!--/#event-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
+    <!--/#event-->
 
-  <section id="event" class="narrow">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-9" style="padding-left: 0px; padding-right: 0px">
-          <div id="event-carousel" class="carousel slide wide" data-interval="false">
-
-
-            <h2 class="heading">Our Previous Speakers</h2>
-                                  <div class="carousel-inner1">
-              <div class="item1 active">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
-                      <h4>Subhash Chandra</h4>
-                      <h5>Owner, MR Prductions</h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
-                      <h4>Dr Neeraj Jain</h4>
-                      <h5>Professor, National Brain Research center, Manesar</h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
-                      <h4>Dr V.K Saraswat</h4>
-                      <h5>former DRDO chief</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <section id="event" class="narrow">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-9" style="padding-left: 0px; padding-right: 0px">
+                    <div id="event-carousel" class="carousel slide wide" data-interval="false">
 
 
-              <div class="item1">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
-                      <h4>Dr Ananda Shankar Jayant</h4>
-                      <h5>Classical dancer</h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
-                      <h4>Dr V Rao</h4>
-                      <h5>OncoLogist</h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
-                      <h4>Anuj Gurwara</h4>
-                      <h5>Playback Singer</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-              <a class="even-control-left" href="#event-carousel" data-slide="prev"><div style="margin-top: 220px"><i class="fa fa-angle-left" style="top: 50%"></i></div></a>
-              <a class="even-control-right" href="#event-carousel" data-slide="next"><div style="margin-top: 220px"><i class="fa fa-angle-right" style="top: 50%"></i></div></a>
+                        <h2 class="heading">Our Previous Speakers</h2>
+                        <div class="carousel-inner1">
+                            <div class="item1 active">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
+                                            <h4>Subhash Chandra</h4>
+                                            <h5>Owner, MR Prductions</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
+                                            <h4>Dr Neeraj Jain</h4>
+                                            <h5>Professor, National Brain Research center, Manesar</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
+                                            <h4>Dr V.K Saraswat</h4>
+                                            <h5>former DRDO chief</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-          </div>
-          <!-- for Mobile and lower pixel resolution-->
-          <h2 class="heading narrow">Our Previous Speakers</h2>
-          <div class="narrow list">
-            <ul id="prev_speakers_list" style="list-style: none; padding-left: 0">
-            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
-              <div class="single-event">
-                <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
-                <h4>Subhash Chandra</h4>
-                <h5>Owner, MR Prductions</h5>
-              </div></li>
-              <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
-                <div class="single-event">
-                  <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
-                  <h4>Dr Neeraj Jain</h4>
-                  <h5>Professor, National Brain Research center, Manesar</h5>
-                </div></li>
-                <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
-                  <div class="single-event">
-                    <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
-                    <h4>Dr V.K Saraswat</h4>
-                    <h5>former DRDO chief</h5>
-                  </div></li>
-                  <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
-                    <div class="single-event">
-                      <img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
-                      <h4>Dr Ananda Shankar Jayant</h4>
-                      <h5>Classical dancer</h5>
-                    </div></li>
-                    <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
-                      <div class="single-event">
-                        <img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
-                        <h4>Dr V Rao</h4>
-                        <h5>OncoLogist</h5>
-                      </div></li>
-                      <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
-                        <div class="single-event" style="padding-left: 0px; padding-right:0px">
-                          <img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
-                          <h4>Anuj Gurwara</h4>
-                          <h5>Playback Singer</h5>
-                        </div></li>
-            </ul>
-          </div><!--
+
+                            <div class="item1">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
+                                            <h4>Dr Ananda Shankar Jayant</h4>
+                                            <h5>Classical dancer</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
+                                            <h4>Dr V Rao</h4>
+                                            <h5>OncoLogist</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="single-event">
+                                            <img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
+                                            <h4>Anuj Gurwara</h4>
+                                            <h5>Playback Singer</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="even-control-left" href="#event-carousel" data-slide="prev">
+                            <div style="margin-top: 220px"><i class="fa fa-angle-left" style="top: 50%"></i></div>
+                        </a>
+                        <a class="even-control-right" href="#event-carousel" data-slide="next">
+                            <div style="margin-top: 220px"><i class="fa fa-angle-right" style="top: 50%"></i></div>
+                        </a>
+
+                    </div>
+                    <!-- for Mobile and lower pixel resolution-->
+                    <h2 class="heading narrow">Our Previous Speakers</h2>
+                    <div class="narrow list">
+                        <ul id="prev_speakers_list" style="list-style: none; padding-left: 0">
+                            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker A.jpg" alt="event-image">
+                                    <h4>Subhash Chandra</h4>
+                                    <h5>Owner, MR Prductions</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker B.jpg" alt="event-image">
+                                    <h4>Dr Neeraj Jain</h4>
+                                    <h5>Professor, National Brain Research center, Manesar</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker C.jpg" alt="event-image">
+                                    <h4>Dr V.K Saraswat</h4>
+                                    <h5>former DRDO chief</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker D.jpg" alt="event-image">
+                                    <h4>Dr Ananda Shankar Jayant</h4>
+                                    <h5>Classical dancer</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
+                                <div class="single-event">
+                                    <img class="img-responsive" src="images/event/Speaker E.jpg" alt="event-image">
+                                    <h4>Dr V Rao</h4>
+                                    <h5>OncoLogist</h5>
+                                </div>
+                            </li>
+                            <li class="col-sm-4" style="padding-left: 0px; padding-right:0px">
+                                <div class="single-event" style="padding-left: 0px; padding-right:0px">
+                                    <img class="img-responsive" src="images/event/Speaker F.jpg" alt="event-image">
+                                    <h4>Anuj Gurwara</h4>
+                                    <h5>Playback Singer</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--
           <div id="event-carousel" class="carousel slide narrow" data-interval="false">
             <h2 class="heading">Our Previous Speakers</h2>
             <div class="carousel-inner1">
@@ -513,33 +643,75 @@
               <a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right" ></i></a>
 
           </div>-->
-        </div><!--
+                </div>
+                <!--
         <div class="guitar">
           <img class="img-responsive" src="images/guitar.png" alt="guitar">
         </div>-->
-      </div>
-    </div>
-  </section><!--/#event-->
+            </div>
+        </div>
+    </section>
+    <!--/#event-->
 
 
     <section id="apply">
-      <!--<div class="guitar2">
+        <!--<div class="guitar2">
         <img class="img-responsive" src="images/guitar2.jpg" alt="guitar">
       </div>-->
-      <div class="apply-content">
-      </br></br></br>
+        <div class="apply-content">
+            </br>
+            </br>
+            </br>
             <h2 id="applyheading">Apply To Speak at TEDxIITHyderabad</h2>
             <p>If you have an idea that the world needs to hear, click apply and we'll get back to you.</p>
             <!-- <center><a href="#" class="btn btn-primary">View Date & Place <i class="fa fa-angle-right"></i></a></center>-->
             <div class="ButtonApply">
-            <p><a href="apply.html"><button type="button">Apply</button></a></p>
-        </div>
+                <p><a href="apply.html"><button type="button">Apply</button></a></p>
+            </div>
             <div style="height: 50px"></div>
-      </div>
+        </div>
     </section>
 
 
-  <!--
+    <section id="news">
+      <div class="container" style="text-align: center;">
+        <h2 class="heading">News</h2>
+        <div class="news_piece">
+        <div class="news_heading">
+          <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ipsum</h1></div>
+          <div class="news_image">
+            <image alt="" src="http://placehold.it/300x400">
+          </div>
+          <!--<div class="news_para_heading">
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+          </div><
+          <div class="news_para" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ipsum tincidunt lacus convallis, eu bibendum lectus tempus. Sed nunc velit, blandit non sem non, ullamcorper feugiat libero. Nam ex erat, scelerisque sit amet lacus a, suscipit mattis elit. Aenean blandit sodales imperdiet. Curabitur nibh lacus, malesuada nec odio ullamcorper, sodales pretium orci. Aliquam pulvinar, arcu eget pulvinar elementum, erat velit laoreet lorem, at egestas turpis nisi scelerisque orci. Aliquam in enim quis magna feugiat pretium nec nec augue. Etiam nec lectus eget massa euismod viverra. Vestibulum laoreet erat id massa eleifend porttitor. Etiam volutpat ex in justo ullamcorper elementum ac sed nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ipsum tincidunt lacus convallis, eu bibendum lectus tempus. Sed nunc velit, blandit non sem non, ullamcorper feugiat libero. Nam ex erat, scelerisque sit amet lacus a, suscipit mattis elit. Aenean blandit sodales imperdiet. Curabitur nibh lacus, malesuada nec odio ullamcorper, sodales pretium orci. Aliquam pulvinar, arcu eget pulvinar elementum, erat velit laoreet lorem, at egestas turpis nisi scelerisque orci. Aliquam in enim quis magna feugiat pretium nec nec augue. Etiam nec lectus eget massa euismod viverra. Vestibulum laoreet erat id massa eleifend porttitor. Etiam volutpat ex in justo ullamcorper elementum ac sed nibh.</p>
+          </div>-->
+          <div id="content-9" class="content mCustomScrollbar _mCS_9">
+            <div id="mCSB_9" class="mCustomScrollBox mCS-rounded-dark mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+              <div id="mCSB_9_container" class="mCSB_container" style="position: relative;top: 0px; left: 0px;" dir="ltr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ipsum tincidunt lacus convallis, eu bibendum lectus tempus. Sed nunc velit, blandit non sem non, ullamcorper feugiat libero. Nam ex erat, scelerisque sit amet lacus a, suscipit mattis elit. Aenean blandit sodales imperdiet. Curabitur nibh lacus, malesuada nec odio ullamcorper, sodales pretium orci. Aliquam pulvinar, arcu eget pulvinar elementum, erat velit laoreet lorem, at egestas turpis nisi scelerisque orci. Aliquam in enim quis magna feugiat pretium nec nec augue. Etiam nec lectus eget massa euismod viverra. Vestibulum laoreet erat id massa eleifend porttitor. Etiam volutpat ex in justo ullamcorper elementum ac sed nibh.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ipsum tincidunt lacus convallis, eu bibendum lectus tempus. Sed nunc velit, blandit non sem non, ullamcorper feugiat libero. Nam ex erat, scelerisque sit amet lacus a, suscipit mattis elit. Aenean blandit sodales imperdiet. Curabitur nibh lacus, malesuada nec odio ullamcorper, sodales pretium orci. Aliquam pulvinar, arcu eget pulvinar elementum, erat velit laoreet lorem, at egestas turpis nisi scelerisque orci. Aliquam in enim quis magna feugiat pretium nec nec augue. Etiam nec lectus eget massa euismod viverra. Vestibulum laoreet erat id massa eleifend porttitor. Etiam volutpat ex in justo ullamcorper elementum ac sed nibh.</p>
+              </div>
+              <div id="mCSB_9_scrollbar_vertical" class="mCSB_scrollTools mCSB_9_scrollbar mCS-rounded-dark mCSB_scrollTools_vertical mCSB_scrollTools_onDrag_expand" style="display: block;">
+                <a href="#" class="mCSB_buttonUp" style="display: block;"></a>
+                <div class="mCSB_draggerContainer">
+                  <div id="mCSB_9_dragger_vertical" class="mCSB_dragger" style="position: absolute;min-height: 14px; top: 0px; display: block;">
+                    <div class="mCSB_dragger_bar"></div>
+                  </div>
+                  <div class="mCSB_draggerRail"></div>
+                </div>
+                <a href="#" class="mCSB_buttonDown" style="display: block;"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!--
 	<section id="twitter">
 		<div id="twitter-feed" class="carousel slide" data-interval="false">
 			<div class="twit">
@@ -570,7 +742,7 @@
 			</div>
 		</div>
 	</section><!--/#twitter-feed-->
-<!--
+    <!--
 	<section id="sponsor">
 		<div id="sponsor-carousel" class="carousel slide" data-interval="false">
 			<div class="container">
@@ -610,54 +782,48 @@
 		</div>
 	</section><!--/#sponsor-->
 
-	<section id="contact">
-		<!--<div id="map">
+    <section id="contact">
+        <!--<div id="map">
 			<div id="gmap-wrap">
 	 			<div id="gmap">
 	 			</div>
 	    	</div>
-		</div>--><!--/#map-->
+		</div>-->
+        <!--/#map-->
 
-		<div class="contact-section">
-			<!--<div class="ear-piece">
+        <div class="contact-section">
+            <!--<div class="ear-piece">
 				<img class="img-responsive" src="images/ear-piece.png" alt="">
 			</div>-->
-			<div class="container">
+            <div class="container">
                 <h2>Contact Us</h2>
-				<div class="row">
+                <div class="row">
                     <ul>
                         <li>
-    						<div class="contact-text">
-    							<h3>Send us a message.</h3>
-    							<address>
+                            <div class="contact-text">
+                                <h3>Send us a message.</h3>
+                                <address>
     								E-mail: <a href="mailto:contact@tedxiith.com?Subject=About%20TEDxIITHyderabad" target="_top">contact@tedxiith.com</a> <br>
     							</address>
                                 <h3>Connect with Us on <a href="https://www.facebook.com/TEDxIITH">Facebook</a></h3>
-                                <div class="fb-like" data-href="https://www.facebook.com/TEDxIITH/"
-                                    data-width="200"
-                                    data-layout="standard"
-                                    data-action="like"
-                                    data-size="large"
-                                    data-show-faces="true"
-                                    data-share="false"
-                                    data-colorscheme="dark">
+                                <div class="fb-like" data-href="https://www.facebook.com/TEDxIITH/" data-width="200" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="false" data-colorscheme="dark">
                                 </div>
-    						</div>
+                            </div>
                         </li>
                         <li>
-    						<div class="contact-address">
-    							<h3>Address</h3>
-    							<address>
+                            <div class="contact-address">
+                                <h3>Address</h3>
+                                <address>
                                     Indian Institute of Technology, Hyderabad<br>
     								Kandi<br>
     								Sangareddy<br>
                                     Telangana - 502285
     							</address>
-    						</div>
+                            </div>
                         </li>
                     </ul>
 
-					<!--
+                    <!--
 					<div class="col-sm-5">
 						<div id="contact-section">
 							<h3>Send a message</h3>
@@ -678,22 +844,22 @@
 					        </form>
 					    </div>
 					</div>-->
-				</div>
-			</div>
-		</div>
-	</section>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--/#contact-->
 
     <footer id="footer">
         <div class="container">
             <div class="text-center">
                 <p>&copy; TEDxIITHyderabad 2016
-                    <br>
-                This independent TEDx event is operated under license from TED.</p>
-              <!--  <p>Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>
-            --></div>
+                    <br> This independent TEDx event is operated under license from TED.</p>
+                <!--  <p>Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>
+            -->
+            </div>
         </div>
-      <!--</div>
+        <!--</div>
     </div>-->
     </footer>
 
@@ -702,11 +868,30 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/jquery.parallax.js"></script>
     <script type="text/javascript" src="js/coundown-timer.js"></script>
     <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="js/jquery.nav.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script>
+      (function($){
+        $(window)load(function(){
+
+				$("#content-9").mCustomScrollbar({
+					scrollButtons:{enable:true,scrollType:"stepped"},
+					keyboard:{scrollType:"stepped"},
+					mouseWheel:{scrollAmount:188,normalizeDelta:true},
+					theme:"rounded-dark",
+					autoExpandScrollbar:true,
+					snapAmount:188,
+					snapOffset:65
+				});
+      });
+    })(jQuery);
+    </script>
 </body>
+
 </html>
