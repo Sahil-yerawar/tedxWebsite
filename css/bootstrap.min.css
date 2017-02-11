@@ -747,7 +747,7 @@ pre code {
 .row1 {
     margin-left: -15px;
     margin-right: -15px;
-    background-color: #ffffff
+    background-color: transparent
 }
 .row3 {
     margin-left: -15px;
@@ -5671,6 +5671,10 @@ button.close {
 
 .carousel {
     position: relative
+}
+
+.carousel1{
+  width: 100%
 }
 
 .carousel-inner {
