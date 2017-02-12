@@ -127,7 +127,7 @@ h2 {
 .navbar-right li a {
   vertical-align: bottom;
   font-size: 30px;
-  color: #000;
+  color: #fff;
   text-transform: uppercase;
   font-family: 'Roboto', 'sans-serif';
   font-weight: 300;
@@ -563,7 +563,7 @@ h2 {
   padding-top: 30px;
 }
 
-#about h2, #applyheading, #event h2, .contact-section h2, #news h2 {
+#about h2, #applyheading, #event h2, .contact-section h2, #news h2, .applyheader h2 {
   max-width: 80%;
   margin-bottom: 50px;
   margin-left: 20px;
@@ -583,6 +583,12 @@ h2 {
     padding-bottom: 30px;
     margin-bottom: 30px;*/
 }
+#apply{
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0;
+}
 
 
 .about-content p, .apply-content p {
@@ -600,11 +606,13 @@ h2 {
 }
 
 .apply-content {
-    background-color: white; rgba(140,140,140,1);
+  background-image: url("../images/texture bg-02.jpg");
+    /*background-color: white; rgba(140,140,140,1);*/
     background-size: cover;
     width: 100%;
     display: block;
     margin: 0 auto;
+    position: relative;
 }
 
 #about .btn-primary {
@@ -656,11 +664,11 @@ h2 {
 ************************/
 
 #news{
-  background-color: #ededed;
+  background-color: #fff;
   position: relative;
   width: 100%;
   display: block;
-  margin: 0
+  margin: 0;
 }
 
 
@@ -723,7 +731,7 @@ h2 {
 
  #content-9.content{
 	height: 340px;
-	background-color: #ededed;
+	background-color: #fff;
 	padding-left:5px;
   padding-right:5px;
   padding-bottom:5px;
@@ -977,6 +985,27 @@ h2 {
   bottom: 0;
   left: 0;
 }*/
+.main_img{
+  background-image: url("../images/Home page bg.jpg");
+  background-attachment: fixed;
+  background-size:100%;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+
+.theme_main{
+  background-color: transparent;
+  margin-left: 29.4%;
+}
+.teme{
+  width: 60%;
+  margin-top: 6.4%;
+}
+.logo{
+  width: 40%;
+  margin-left: 20%;
+}
 .parallax__layer--base {
   transform: translateZ(0);
 }
