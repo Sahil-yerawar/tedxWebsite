@@ -781,6 +781,7 @@
 	</section><!--/#sponsor-->
 
     <section id="contact">
+    <canvas></canvas>
         <!--<div id="map">
 			<div id="gmap-wrap">
 	 			<div id="gmap">
@@ -895,7 +896,7 @@
     <script type="text/javascript">
     	//CANVAS
     	$(function(){
-    		var canvasColors = document.getComputedStyles('canvas');
+
     	    var canvas = document.querySelector('canvas'),
     	      ctx = canvas.getContext('2d'),
     	      color = '#ffffff';
@@ -932,7 +933,7 @@
     	    Dot.prototype = {
     	        create: function(){
     	            ctx.beginPath();
-    	            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     	            //ctx.fill();
     	        },
 
