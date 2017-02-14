@@ -21,24 +21,33 @@ body {
   position:absolute;
   top:0;
   left:0;
-  /*width:100vw;
-  height:100vh;*/
+  width:100vw;
+  height:100vh;
   z-index:1;
 
-  --lightcolor: #eeeeee;
-  --darkcolor: #222222;
+
 }
 
 #contactdots {
   position:absolute;
   /*top:0;
   left:0;*/
-  /*width:100vw;
-  height:100vh;*/
+  width:100vw;
+  /*height:100vh;*/
   z-index:1;
 
-  --lightcolor: #eeeeee;
-  --darkcolor: #222222;
+
+}
+
+#aboutdots {
+  position:absolute;
+  /*top:0;
+  left:0;*/
+  width:100vw;
+  /*height:100vh;*/
+  z-index:1;
+
+
 }
 
 
