@@ -586,10 +586,22 @@ h2 {
 #apply{
   position: relative;
   width: 100%;
+  min-height: 656px;
   display: block;
   margin: 0;
 }
 
+.side_images{
+  display: inline-block;
+  float: left;
+}
+
+.apply-write{
+  min-width: 60px;
+  min-height: 1px;
+  overflow: hidden;
+
+}
 
 .about-content p, .apply-content p {
   max-width: 60%;
@@ -597,7 +609,7 @@ h2 {
   font-size: 20px;
   font-family: 'Open Sans',sans-serif;
   font-weight: 200;
-  text-align: center;
+  /*text-align: center;*/
   position: relative;
   margin: 0 auto;
   width: auto;
@@ -1062,7 +1074,7 @@ h2 {
 #Core1 {
   position: relative;
   overflow: hidden;
-  background-color: #4d6712;
+  background-color: #fff;
 
 }/*
 #Core1 .container{
@@ -1078,15 +1090,16 @@ h2 {
 .profile_pic{
   display: inline-block;
   /*border: thin solid #fff;*/
-  background-image: url("../images/Sahil.jpeg");
+  background-image: url("../images/_IIT4476.JPG");
   margin-left: 70px;
   margin-top: 10px;
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  -moz-transform: rotate(-90deg);
 }
 
 .coords{
@@ -1146,7 +1159,7 @@ h2 {
     border-radius: 0;
     float: left;
     height: 54px;
-    margin-bottom: 5px;
+    margin-bottom: 9px;
     margin-left: 0;
     margin-right: 15px !important;
     margin-top: 0;
@@ -1158,7 +1171,7 @@ h2 {
 .article-slide .carousel-indicators img {
     border: 2px solid #FFFFFF;
     float: left;
-    height: 54px;
+    height: 58px;
     left: 0;
     width: 100px;
 
@@ -1176,8 +1189,9 @@ h2 {
   height: auto;
   overflow: auto;
   opacity: 1;
-  margin-left: 28%;
-  margin-right: 28%;
+  left: 25vw;
+  margin-left: auto;
+  margin-right:auto;
   /*background-color: #000
 */
 /*
