@@ -1090,16 +1090,16 @@ h2 {
 .profile_pic{
   display: inline-block;
   /*border: thin solid #fff;*/
-  background-image: url("../images/_IIT4476.JPG");
-  margin-left: 70px;
+  background-image: url("../images/Sahil.jpeg");
+  margin-left: 55px;
   margin-top: 10px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  -moz-transform: rotate(-90deg);
+  background-position: center center;/*
+  -moz-transform: rotate(-90deg);*/
 }
 
 .coords{
