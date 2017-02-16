@@ -12,7 +12,7 @@ body {
   font-family: 'Dosis', sans-serif;
   font-size: 17px;
   color: #000000;
-  background-color: #4d4f51;
+  background-color: #fff;
 }
 
 
@@ -563,7 +563,7 @@ h2 {
   padding-top: 30px;
 }
 
-#about h2, #applyheading, #event h2, .contact-section h2, #news h2, .applyheader h2 {
+#about h2, #applyheading, #event h2, .contact-section h2, #news h2, .applyheader h2,#apply h2 {
   max-width: 80%;
   margin-bottom: 50px;
   margin-left: 20px;
