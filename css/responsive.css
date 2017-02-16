@@ -141,6 +141,14 @@
   .fixed-menu .navbar-right li a {
     padding: 7px 25px;
   }
+  .navbar-right li a{
+    color: #000;
+  }
+
+  .navbar-brand{
+    float: right;
+
+  }
 
   #home {
     margin-top: 10%;

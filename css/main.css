@@ -54,8 +54,10 @@ h2 {
 }
 
 .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #000;
 }
+
+
 
 .navbar-toggle,
 .navbar-toggle:focus {
@@ -133,6 +135,7 @@ h2 {
   font-weight: 300;
 }
 
+
 .navbar-right li a:hover,
 .navbar-right li a:focus,
 .navbar-right .active a {
@@ -175,9 +178,10 @@ h2 {
 }
 
 .fixed-menu .navbar-brand img {
-  height:66px;
+  height:50px;
 
-  top: 0;
+  top: 10px;
+
 }
 
 .fixed-menu .header-top {
@@ -1199,6 +1203,8 @@ h2 {
 
 }
 
+.
+
 @media only screen and (max-width: 768px) {
   .wide{
     display: none;
@@ -1254,7 +1260,7 @@ h2 {
     margin-top: 0;
     padding: 0;
     margin-bottom: 0;
-    width: 87%;
+    width: 81%;
   }
 
   .parallax-img1 {
