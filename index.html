@@ -383,6 +383,7 @@
 
                             <div class="item active">
                               <div class="wide">
+                              	
                                 <img alt="" title="" src="images/event/Speaker 1-02-02(2).jpg" style="width=100%" class="wide">
                               </div>
                                 <div class="narrow">
@@ -395,6 +396,7 @@
                                     <h2 style="text-align: left;left: 0; margin-bottom: 10px;margin-left: 10px; "><b>Subhash Chandra</b></h2>
                                     <br></br>
                                     <h2 style="text-align: left;left: 0; margin-bottom: 10px;margin-left: 10px; font-size: 25px;">Owner, MR Productions</h2>
+                                    
                                   </div>
                                 </div>
                             </div>
@@ -485,10 +487,14 @@
                                 </div>
                             </div>
                         </div>
+                        <center>
                         <div class="wide">
                         <ol class="carousel-indicators">
+                        
                             <div class="indicator_row">
+                            
                             <li class="active" data-slide-to="0" data-target="#article-photo-carousel">
+
                                 <img alt="" src="images/event/Speaker A.jpg" style="width: 100px;">
                             </li>
                             <li class="" data-slide-to="1" data-target="#article-photo-carousel">
@@ -507,9 +513,12 @@
                             <li class="" data-slide-to="5" data-target="#article-photo-carousel">
                                 <img alt="" src="images/event/Speaker F.jpg" style="width: 100px;">
                             </li>
+                            
                           </div>
+                          
                         </ol>
                       </div>
+                      </center>
                       <div class="narrow">
                         <a class="even-control-left" href="#article-photo-carousel" data-slide="prev" >
                             <div style="bottom: 0%"><i class="fa fa-angle-left" style="top: 50%"></i></div>
@@ -901,6 +910,13 @@
 					snapAmount:188,
 					snapOffset:65
 				});
+
+				window.addEventListener("scroll", function(){
+					var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+					if (window.scrollY > 0.6*h) {
+						$('.navbar-collapse').css("content", "\" \" !important");
+					}
+				})
       });
     })(jQuery);
     </script>
@@ -1020,113 +1036,138 @@
     	//CANVAS
     	$(function(){
 
-    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    	    var canvas = document.getElementById('aboutdots'),
-    	      ctx = canvas.getContext('2d'),
-    	      color = '#1e1e1e';
-    	    canvas.width = window.innerWidth;
-    	    canvas.height = window.innerHeight;
-    	    canvas.style.display = 'block';
-    	    ctx.fillStyle = color;
-    	    ctx.lineWidth = .2;
-    	    ctx.strokeStyle = color;
+    		var isMobile = {
+    		    Android: function() {
+    		        return navigator.userAgent.match(/Android/i);
+    		    },
+    		    BlackBerry: function() {
+    		        return navigator.userAgent.match(/BlackBerry/i);
+    		    },
+    		    iOS: function() {
+    		        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    		    },
+    		    Opera: function() {
+    		        return navigator.userAgent.match(/Opera Mini/i);
+    		    },
+    		    Windows: function() {
+    		        return navigator.userAgent.match(/IEMobile/i);
+    		    },
+    		    any: function() {
+    		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    		    }
+    		};
+
+    		if(!isMobile.any()){
+
+	    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	    	    var canvas = document.getElementById('aboutdots'),
+	    	      ctx = canvas.getContext('2d'),
+	    	      color = '#1e1e1e';
+	    	    canvas.width = window.innerWidth;
+	    	    canvas.height = window.innerHeight;
+	    	    canvas.style.display = 'block';
+	    	    ctx.fillStyle = color;
+	    	    ctx.lineWidth = .2;
+	    	    ctx.strokeStyle = color;
 
 
-    	    var mousePosition = {
-    	        x: w/4,
-    	        y: h/4
-    	    };
+	    	    var mousePosition = {
+	    	        x: w/4,
+	    	        y: h/4
+	    	    };
 
-    	    var dots = {
-    	        nb: 150,
-    	        distance: 100,
-    	        d_radius: 150,
-    	        array: []
-    	    };
+	    	    var dots = {
+	    	        nb: 150,
+	    	        distance: 100,
+	    	        d_radius: 150,
+	    	        array: []
+	    	    };
 
-    	    function Dot(){
-    	        this.x = Math.random() * canvas.width;
-    	        this.y = Math.random() * canvas.height;
+	    	    function Dot(){
+	    	        this.x = Math.random() * canvas.width;
+	    	        this.y = Math.random() * canvas.height;
 
-    	        this.vx = -.5 + Math.random();
-    	        this.vy = -.5 + Math.random();
+	    	        this.vx = -.5 + Math.random();
+	    	        this.vy = -.5 + Math.random();
 
-    	        this.radius = Math.random();
-    	    }
+	    	        this.radius = Math.random();
+	    	    }
 
-    	    Dot.prototype = {
-    	        create: function(){
-    	            ctx.beginPath();
-    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    	            //ctx.fill();
-    	        },
+	    	    Dot.prototype = {
+	    	        create: function(){
+	    	            ctx.beginPath();
+	    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+	    	            //ctx.fill();
+	    	        },
 
-    	        animate: function(){
-    	            for(i = 0; i < dots.nb; i++){
+	    	        animate: function(){
+	    	            for(i = 0; i < dots.nb; i++){
 
-    	                var dot = dots.array[i];
+	    	                var dot = dots.array[i];
 
-    	                if(dot.y < 0 || dot.y > canvas.height){
-    	                    dot.vx = dot.vx;
-    	                    dot.vy = - dot.vy;
-    	                }
-    	                else if(dot.x < 0 || dot.x > canvas.width){
-    	                    dot.vx = - dot.vx;
-    	                    dot.vy = dot.vy;
-    	                }
-    	                dot.x += dot.vx;
-    	                dot.y += dot.vy;
-    	            }
-    	        },
+	    	                if(dot.y < 0 || dot.y > canvas.height){
+	    	                    dot.vx = dot.vx;
+	    	                    dot.vy = - dot.vy;
+	    	                }
+	    	                else if(dot.x < 0 || dot.x > canvas.width){
+	    	                    dot.vx = - dot.vx;
+	    	                    dot.vy = dot.vy;
+	    	                }
+	    	                dot.x += dot.vx;
+	    	                dot.y += dot.vy;
+	    	            }
+	    	        },
 
-    	        line: function(){
-    	            for(i = 0; i < dots.nb; i++){
-    	                for(j = 0; j < dots.nb; j++){
-    	                    i_dot = dots.array[i];
-    	                    j_dot = dots.array[j];
+	    	        line: function(){
+	    	            for(i = 0; i < dots.nb; i++){
+	    	                for(j = 0; j < dots.nb; j++){
+	    	                    i_dot = dots.array[i];
+	    	                    j_dot = dots.array[j];
 
-    	                    if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-    	                        if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-    	                            ctx.beginPath();
-    	                            ctx.moveTo(i_dot.x, i_dot.y);
-    	                            ctx.lineTo(j_dot.x, j_dot.y);
-    	                            ctx.stroke();
-    	                            ctx.closePath();
-    	                        }
-    	                    }
-    	                }
-    	            }
-    	        }
-    	    };
+	    	                    if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
+	    	                        if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
+	    	                            ctx.beginPath();
+	    	                            ctx.moveTo(i_dot.x, i_dot.y);
+	    	                            ctx.lineTo(j_dot.x, j_dot.y);
+	    	                            ctx.stroke();
+	    	                            ctx.closePath();
+	    	                        }
+	    	                    }
+	    	                }
+	    	            }
+	    	        }
+	    	    };
 
-    	    function createDots(){
-    	        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    	        for(i = 0; i < dots.nb; i++){
-    	            dots.array.push(new Dot());
-    	            dot = dots.array[i];
+	    	    function createDots(){
+	    	        ctx.clearRect(0, 0, canvas.width, canvas.height);
+	    	        for(i = 0; i < dots.nb; i++){
+	    	            dots.array.push(new Dot());
+	    	            dot = dots.array[i];
 
-    	            dot.create();
-    	        }
+	    	            dot.create();
+	    	        }
 
-    	        dot.line();
-    	        dot.animate();
-    	    }
+	    	        dot.line();
+	    	        dot.animate();
+	    	    }
 
-    	    // $('canvas').on('mousemove mouseleave', function(e){
-    	    //     if(e.type == 'mousemove'){
-    	    //         mousePosition.x = e.clientX;
-    	    //         mousePosition.y = e.clientY;
-    	    //         $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
-    	    //     }
-    	    //     if(e.type == 'mouseleave'){
-    	    //         mousePosition.x = canvas.width / 2;
-    	    //         mousePosition.y = canvas.height / 2;
-    	    //          $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
-    	    //     }
-    	    // });
-    	    setInterval(createDots, 1000/30);   
-    	});
+	    	    // $('canvas').on('mousemove mouseleave', function(e){
+	    	    //     if(e.type == 'mousemove'){
+	    	    //         mousePosition.x = e.clientX;
+	    	    //         mousePosition.y = e.clientY;
+	    	    //         $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
+	    	    //     }
+	    	    //     if(e.type == 'mouseleave'){
+	    	    //         mousePosition.x = canvas.width / 2;
+	    	    //         mousePosition.y = canvas.height / 2;
+	    	    //          $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
+	    	    //     }
+	    	    // });
+	    	    setInterval(createDots, 1000/30);   
+	    	}
+	    });
+		
 
     </script>
 
@@ -1136,116 +1177,140 @@
     	//CANVAS
     	$(function(){
 
-    		var heightThingy = document.getElementById('contact').height;
-    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    	    var canvas = document.getElementById('contactdots'),
-    	    
-    	      ctx = canvas.getContext('2d'),
-    	      color = '#ffffff';
-    	    canvas.width = window.innerWidth;
-    	    canvas.height = window.innerHeight;
-    	    canvas.style.height = '60%';
-    	    canvas.style.display = 'block';
-    	    ctx.fillStyle = color;
-    	    ctx.lineWidth = .2;
-    	    ctx.strokeStyle = color;
+    		var isMobile = {
+    		    Android: function() {
+    		        return navigator.userAgent.match(/Android/i);
+    		    },
+    		    BlackBerry: function() {
+    		        return navigator.userAgent.match(/BlackBerry/i);
+    		    },
+    		    iOS: function() {
+    		        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    		    },
+    		    Opera: function() {
+    		        return navigator.userAgent.match(/Opera Mini/i);
+    		    },
+    		    Windows: function() {
+    		        return navigator.userAgent.match(/IEMobile/i);
+    		    },
+    		    any: function() {
+    		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    		    }
+    		};
+
+    		if(!isMobile.any()){
+
+	    		var heightThingy = document.getElementById('contact').height;
+	    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	    	    var canvas = document.getElementById('contactdots'),
+	    	    
+	    	      ctx = canvas.getContext('2d'),
+	    	      color = '#ffffff';
+	    	    canvas.width = window.innerWidth;
+	    	    canvas.height = window.innerHeight;
+	    	    canvas.style.height = '60%';
+	    	    canvas.style.display = 'block';
+	    	    ctx.fillStyle = color;
+	    	    ctx.lineWidth = .2;
+	    	    ctx.strokeStyle = color;
 
 
-    	    var mousePosition = {
-    	        x: w/2,
-    	        y: h/2
-    	    };
+	    	    var mousePosition = {
+	    	        x: w/2,
+	    	        y: h/2
+	    	    };
 
-    	    var dots = {
-    	        nb: 150,
-    	        distance: 100,
-    	        d_radius: 150,
-    	        array: []
-    	    };
+	    	    var dots = {
+	    	        nb: 150,
+	    	        distance: 120,
+	    	        d_radius: 150,
+	    	        array: []
+	    	    };
 
-    	    function Dot(){
-    	        this.x = Math.random() * canvas.width;
-    	        this.y = Math.random() * canvas.height;
+	    	    function Dot(){
+	    	        this.x = Math.random() * canvas.width;
+	    	        this.y = Math.random() * canvas.height;
 
-    	        this.vx = -.5 + Math.random();
-    	        this.vy = -.5 + Math.random();
+	    	        this.vx = -.5 + Math.random();
+	    	        this.vy = -.5 + Math.random();
 
-    	        this.radius = Math.random();
-    	    }
+	    	        this.radius = Math.random();
+	    	    }
 
-    	    Dot.prototype = {
-    	        create: function(){
-    	            ctx.beginPath();
-    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    	            //ctx.fill();
-    	        },
+	    	    Dot.prototype = {
+	    	        create: function(){
+	    	            ctx.beginPath();
+	    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+	    	            //ctx.fill();
+	    	        },
 
-    	        animate: function(){
-    	            for(i = 0; i < dots.nb; i++){
+	    	        animate: function(){
+	    	            for(i = 0; i < dots.nb; i++){
 
-    	                var dot = dots.array[i];
+	    	                var dot = dots.array[i];
 
-    	                if(dot.y < 0 || dot.y > canvas.height){
-    	                    dot.vx = dot.vx;
-    	                    dot.vy = - dot.vy;
-    	                }
-    	                else if(dot.x < 0 || dot.x > canvas.width){
-    	                    dot.vx = - dot.vx;
-    	                    dot.vy = dot.vy;
-    	                }
-    	                dot.x += dot.vx;
-    	                dot.y += dot.vy;
-    	            }
-    	        },
+	    	                if(dot.y < 0 || dot.y > canvas.height){
+	    	                    dot.vx = dot.vx;
+	    	                    dot.vy = - dot.vy;
+	    	                }
+	    	                else if(dot.x < 0 || dot.x > canvas.width){
+	    	                    dot.vx = - dot.vx;
+	    	                    dot.vy = dot.vy;
+	    	                }
+	    	                dot.x += dot.vx;
+	    	                dot.y += dot.vy;
+	    	            }
+	    	        },
 
-    	        line: function(){
-    	            for(i = 0; i < dots.nb; i++){
-    	                for(j = 0; j < dots.nb; j++){
-    	                    i_dot = dots.array[i];
-    	                    j_dot = dots.array[j];
+	    	        line: function(){
+	    	            for(i = 0; i < dots.nb; i++){
+	    	                for(j = 0; j < dots.nb; j++){
+	    	                    i_dot = dots.array[i];
+	    	                    j_dot = dots.array[j];
 
-    	                    if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-    	                        if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-    	                            ctx.beginPath();
-    	                            ctx.moveTo(i_dot.x, i_dot.y);
-    	                            ctx.lineTo(j_dot.x, j_dot.y);
-    	                            ctx.stroke();
-    	                            ctx.closePath();
-    	                        }
-    	                    }
-    	                }
-    	            }
-    	        }
-    	    };
+	    	                    if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
+	    	                        if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
+	    	                            ctx.beginPath();
+	    	                            ctx.moveTo(i_dot.x, i_dot.y);
+	    	                            ctx.lineTo(j_dot.x, j_dot.y);
+	    	                            ctx.stroke();
+	    	                            ctx.closePath();
+	    	                        }
+	    	                    }
+	    	                }
+	    	            }
+	    	        }
+	    	    };
 
-    	    function createDots(){
-    	        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    	        for(i = 0; i < dots.nb; i++){
-    	            dots.array.push(new Dot());
-    	            dot = dots.array[i];
+	    	    function createDots(){
+	    	        ctx.clearRect(0, 0, canvas.width, canvas.height);
+	    	        for(i = 0; i < dots.nb; i++){
+	    	            dots.array.push(new Dot());
+	    	            dot = dots.array[i];
 
-    	            dot.create();
-    	        }
+	    	            dot.create();
+	    	        }
 
-    	        dot.line();
-    	        dot.animate();
-    	    }
+	    	        dot.line();
+	    	        dot.animate();
+	    	    }
 
-    	    // $("#contactdots").on('mousemove mouseleave', function(e){
-    	    //     if(e.type == 'mousemove'){
-    	    //         mousePosition.x = e.clientX;
-    	    //         mousePosition.y = e.clientY;
-    	    //         // $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
-    	    //     }
-    	    //     if(e.type == 'mouseleave'){
-    	    //         mousePosition.x = canvas.width / 2;
-    	    //         mousePosition.y = canvas.height / 2;
-    	    //         // $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
-    	    //     }
-    	    // });
-    	    setInterval(createDots, 1000/30);   
-    	});
+	    	    // $("#contactdots").on('mousemove mouseleave', function(e){
+	    	    //     if(e.type == 'mousemove'){
+	    	    //         mousePosition.x = e.clientX;
+	    	    //         mousePosition.y = e.clientY;
+	    	    //         // $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
+	    	    //     }
+	    	    //     if(e.type == 'mouseleave'){
+	    	    //         mousePosition.x = canvas.width / 2;
+	    	    //         mousePosition.y = canvas.height / 2;
+	    	    //         // $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
+	    	    //     }
+	    	    // });
+	    	    setInterval(createDots, 1000/30);   
+	    	}
+	    });
 
     </script>
 </body>
