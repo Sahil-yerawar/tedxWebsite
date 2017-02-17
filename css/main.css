@@ -720,8 +720,10 @@ h2 {
   padding: 5px;
 }
 
+
+
 .news_para{
-  top: 0
+  top: 0;
   float: left;
   padding: 10px;
 }
@@ -1277,9 +1279,14 @@ h2 {
     max-width: 100%;
     font-size: 30px;
   }
+
   .news_piece{
     width: 100%;
     padding: 0
+  }
+
+  .news_image{
+    float: none;
   }
   .fixed-menu .navbar-brand {
     height: 66px;
