@@ -522,7 +522,7 @@ h2 {
 .even-control-left,
 .even-control-right {
   position: absolute;
-  top: 0;
+  /*top: 0;*/
   bottom: 0;
   left: 0;
   width: 5%;
@@ -534,11 +534,11 @@ h2 {
 
 .even-control-left {
   /*right: 3%*/
-  left: 0;
+  left: 30%;
 }
 
 .even-control-right {
-  right: 0;
+  right: 30%;
   left: auto;
 }
 
@@ -683,8 +683,8 @@ h2 {
   background-color: #fff;
   position: relative;
   width: 100%;
-  display: block;
-  margin: 0;
+  /*display: block;
+  */margin: 0;
 }
 
 
@@ -1203,7 +1203,7 @@ h2 {
 
 }
 
-.
+
 
 @media only screen and (max-width: 768px) {
   .wide{
@@ -1211,7 +1211,11 @@ h2 {
   }
   .narrow{
     display: block;
-  }
+  }/*
+  .center-carousel{
+    margin-left: 15px;
+    margin-right: 15px;
+  }*/
   .parallax-img1 {
     background-image: url("../images/slider/TEDxTeam2.jpg");
     background-attachment: fixed;
@@ -1238,8 +1242,8 @@ h2 {
     font-size: 24px;
     color: #000000;
     width: auto;
-    bottom: auto;
-    top: 0;
+  /*  bottom: auto;*/
+    /*top: 0;*/
   }
 
   .narrow .list{
@@ -1255,6 +1259,28 @@ h2 {
     display: block;
   }
 
+  .center-carousel{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .slide-detail{
+    width: inherit;
+    min-height: 300px;
+    background-color: #1A1628;
+    overflow: auto;
+  }
+  #event h2{
+    color: #fff;
+  }
+  #news h2{
+    max-width: 100%;
+    font-size: 30px;
+  }
+  .news_piece{
+    width: 100%;
+    padding: 0
+  }
   .fixed-menu .navbar-brand {
     height: 66px;
     margin-top: 0;
@@ -1262,6 +1288,7 @@ h2 {
     margin-bottom: 0;
     width: 81%;
   }
+
 
   .parallax-img1 {
     background-image: url("../images/slider/TEDxTeam2.jpg");
@@ -1286,11 +1313,11 @@ h2 {
     }
   .even-control-left, .even-control-right{
     position: absolute;
-    font-size: 24px;
+    font-size: 40px;
     color: #000000;
     width: auto;
-    bottom: auto;
-    top: 0;
+  /*  bottom: auto;*/
+    /*top: 0;*/
   }
 
   .narrow .list{
