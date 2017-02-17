@@ -211,9 +211,9 @@
 			</div>
 		</div>
 	</section><!--/#explore-->
-
+	<span><canvas id="aboutdots"></canvas>
     <section id="about">
-    <div><canvas id="aboutdots"></canvas></div>
+    
     <div id="log"></div>
         <!--<div class="guitar2">
               <img class="img-responsive" src="images/guitar2.jpg" alt="guitar">
@@ -709,6 +709,7 @@
 
     </div>
     </section>
+    </span>
 
 
     <!--
@@ -900,7 +901,8 @@
     <script type="text/javascript">
     	//CANVAS
     	$(function(){
-
+    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     	    var canvas = document.getElementById('homedots'),
     	      ctx = canvas.getContext('2d'),
     	      color = '#ffffff';
@@ -913,8 +915,8 @@
 
 
     	    var mousePosition = {
-    	        x: 30 * canvas.width / 100,
-    	        y: 30 * canvas.height / 100
+    	        x: w/4,
+    	        y: h/2
     	    };
 
     	    var dots = {
@@ -992,16 +994,16 @@
     	        dot.animate();
     	    }
 
-    	    $('canvas').on('mousemove mouseleave', function(e){
-    	        if(e.type == 'mousemove'){
-    	            mousePosition.x = e.pageX;
-    	            mousePosition.y = e.pageY;
-    	        }
-    	        if(e.type == 'mouseleave'){
-    	            mousePosition.x = canvas.width / 8;
-    	            mousePosition.y = canvas.height*(1-1/8);
-    	        }
-    	    });
+    	    // $('canvas').on('mousemove mouseleave', function(e){
+    	    //     if(e.type == 'mousemove'){
+    	    //         mousePosition.x = e.clientX;
+    	    //         mousePosition.y = e.clientY;
+    	    //     }
+    	    //     if(e.type == 'mouseleave'){
+    	    //         mousePosition.x = canvas.width / 8;
+    	    //         mousePosition.y = canvas.height*(1-1/8);
+    	    //     }
+    	    // });
     	    setInterval(createDots, 1000/30);   
     	});
 
@@ -1011,6 +1013,8 @@
     	//CANVAS
     	$(function(){
 
+    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     	    var canvas = document.getElementById('aboutdots'),
     	      ctx = canvas.getContext('2d'),
     	      color = '#444444';
@@ -1023,13 +1027,13 @@
 
 
     	    var mousePosition = {
-    	        x: 30 * canvas.width / 100,
-    	        y: 30 * canvas.height / 100
+    	        x: w/4,
+    	        y: h/2
     	    };
 
     	    var dots = {
     	        nb: 150,
-    	        distance: 100,
+    	        distance: 159,
     	        d_radius: 150,
     	        array: []
     	    };
@@ -1102,18 +1106,18 @@
     	        dot.animate();
     	    }
 
-    	    $('canvas').on('mousemove mouseleave', function(e){
-    	        if(e.type == 'mousemove'){
-    	            mousePosition.x = e.pageX;
-    	            mousePosition.y = e.pageY;
-    	            $( "#log" ).text( "pageX: " + e.pageX + ", pageY: " + e.pageY );
-    	        }
-    	        if(e.type == 'mouseleave'){
-    	            mousePosition.x = canvas.width / 2;
-    	            mousePosition.y = canvas.height / 2;
-    	             $( "#log" ).text( "pageX: " + canvas.width/2 + ", pageY: " + canvas.height/2 );
-    	        }
-    	    });
+    	    // $('canvas').on('mousemove mouseleave', function(e){
+    	    //     if(e.type == 'mousemove'){
+    	    //         mousePosition.x = e.clientX;
+    	    //         mousePosition.y = e.clientY;
+    	    //         $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
+    	    //     }
+    	    //     if(e.type == 'mouseleave'){
+    	    //         mousePosition.x = canvas.width / 2;
+    	    //         mousePosition.y = canvas.height / 2;
+    	    //          $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
+    	    //     }
+    	    // });
     	    setInterval(createDots, 1000/30);   
     	});
 
@@ -1126,7 +1130,10 @@
     	$(function(){
 
     		var heightThingy = document.getElementById('contact').height;
+    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     	    var canvas = document.getElementById('contactdots'),
+    	    
     	      ctx = canvas.getContext('2d'),
     	      color = '#ffffff';
     	    canvas.width = window.innerWidth;
@@ -1139,8 +1146,8 @@
 
 
     	    var mousePosition = {
-    	        x: 30 * canvas.width / 100,
-    	        y: 30 * canvas.height / 100
+    	        x: w/2,
+    	        y: h/2
     	    };
 
     	    var dots = {
@@ -1218,18 +1225,18 @@
     	        dot.animate();
     	    }
 
-    	    $("#contactdots").on('mousemove mouseleave', function(e){
-    	        if(e.type == 'mousemove'){
-    	            mousePosition.x = e.pageX;
-    	            mousePosition.y = e.pageY - 4200;
-    	            // $( "#log" ).text( "pageX: " + e.pageX + ", pageY: " + e.pageY );
-    	        }
-    	        if(e.type == 'mouseleave'){
-    	            mousePosition.x = canvas.width / 2;
-    	            mousePosition.y = canvas.height / 2;
-    	            // $( "#log" ).text( "pageX: " + canvas.width/2 + ", pageY: " + canvas.height/2 );
-    	        }
-    	    });
+    	    // $("#contactdots").on('mousemove mouseleave', function(e){
+    	    //     if(e.type == 'mousemove'){
+    	    //         mousePosition.x = e.clientX;
+    	    //         mousePosition.y = e.clientY;
+    	    //         // $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
+    	    //     }
+    	    //     if(e.type == 'mouseleave'){
+    	    //         mousePosition.x = canvas.width / 2;
+    	    //         mousePosition.y = canvas.height / 2;
+    	    //         // $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
+    	    //     }
+    	    // });
     	    setInterval(createDots, 1000/30);   
     	});
 
