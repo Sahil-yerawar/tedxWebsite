@@ -265,8 +265,8 @@
               </div>
           </div>-->
           		<div class="col-md-4">
-          			<div id="about-section">
-          				<h3><font color=#021525>What is TEDx?</font></h3>
+          			<h3 id="about1"> <font color=#021525>What is TEDx?</font></h3>
+          			<div id="about-section1">          				
 
           				
           				At TEDxIITHyderabad, we believe it is important to invest in areas where the local community finds its relevance. Consequently, TEDxIITHyderabad is an effort to bring together and showcase the bright minds from the local scene- we are continuously in awe of how much Hyderabad has to offer in terms of the quality of ideas and number of people ready to share their stories with the world.As an educational institution, we want to leverage ideas, technologies, design and education to help create a better future, which is is what TED stands for.
@@ -275,8 +275,8 @@
           			</div>
           		</div>
           		<div class="col-md-4">
-          			<div id="about-section">
-          				<h3><font color=#021525>Why is IIT-Hyderabad organising TEDxIITHyderabad?</font></h3>
+          			<h3 id="about2"><font color=#021525>Why is IIT-Hyderabad organising TEDxIITHyderabad?</font></h3>
+          			<div id="about-section2">          				
 
           				
           				At TEDxIITHyderabad, we believe it is important to invest in areas where the local community finds its relevance. Consequently, TEDxIITHyderabad is an effort to bring together and showcase the bright minds from the local scene- we are continuously in awe of how much Hyderabad has to offer in terms of the quality of ideas and number of people ready to share their stories with the world.As an educational institution, we want to leverage ideas, technologies, design and education to help create a better future, which is is what TED stands for.
@@ -285,9 +285,10 @@
           			</div>
           		</div>
           		<div class="col-md-4">
-          			<div id="about-section">
-          				<h3><font color=#021525>Launching TEDxIITHyderabad 2017.</font></h3>
+          			<h3 id="about3"><font color=#021525>Launching TEDxIITHyderabad 2017.</font></h3>
 
+          			<div id="about-section3">
+          				
           				
           				At TEDxIITHyderabad, we believe it is important to invest in areas where the local community finds its relevance. Consequently, TEDxIITHyderabad is an effort to bring together and showcase the bright minds from the local scene- we are continuously in awe of how much Hyderabad has to offer in terms of the quality of ideas and number of people ready to share their stories with the world.As an educational institution, we want to leverage ideas, technologies, design and education to help create a better future, which is is what TED stands for.
           				<p> </p>
@@ -902,31 +903,49 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<script>
-	(function($){
-		$(window).on("load",function(){
+	<script>
+		(function($){
+			$(window).on("load",function(){
 
-			$("#content-9").mCustomScrollbar({
-				scrollButtons:{enable:true,scrollType:"stepped"},
-				keyboard:{scrollType:"stepped"},
-				mouseWheel:{scrollAmount:188},
-				theme:"rounded-dark",
-				autoExpandScrollbar:true,
-				snapAmount:188,
-				snapOffset:65
+				$("#content-9").mCustomScrollbar({
+					scrollButtons:{enable:true,scrollType:"stepped"},
+					keyboard:{scrollType:"stepped"},
+					mouseWheel:{scrollAmount:188},
+					theme:"rounded-dark",
+					autoExpandScrollbar:true,
+					snapAmount:188,
+					snapOffset:65
+				});
+
+				window.addEventListener("scroll", function(){
+					var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+					if (window.scrollY > 0.6*h) {
+						$('.navbar-collapse').css("content", "\" \" !important");
+					}
+				})
 			});
+		})(jQuery);
+	</script>
 
-			window.addEventListener("scroll", function(){
-				var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-				if (window.scrollY > 0.6*h) {
-					$('.navbar-collapse').css("content", "\" \" !important");
-				}
-			})
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('#about1').click(function() {
+	                $('#about-section1').slideToggle("fast");
+		        });
+
+			$('#about2').click(function() {
+	                $('#about-section2').slideToggle("fast");
+		        });
+
+			$('#about3').click(function() {
+	                $('#about-section3').slideToggle("fast");
+		        });
 		});
-	})(jQuery);
-</script>
 
-<script type="text/javascript">
+	</script>
+
+	<script type="text/javascript">
     	//CANVAS
     	$(function(){
     		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
