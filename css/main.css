@@ -1541,16 +1541,44 @@ h2 {
 
 }
 
+.main_img1{
+  background-image: url("../images/Home page bg.jpg");
+
+  background-attachment: fixed;
+
+  background-size:100%;
+
+  width: 100vw;
+
+  height: 30vh;
+
+  position: relative;
+
+}
+
 .theme_main{
   background-color: transparent;
 
   margin-left: 29.4%;
 
 }
+.theme_main1{
+  background-color: transparent;
+
+  margin-left:5%;
+  margin-right: 5%;
+
+}
 .teme{
   width: 60%;
 
   margin-top: 6.4%;
+
+}
+.teme1{
+  width: 80%;
+  margin-left: 10%;
+  /*margin-top: 6.4%;*/
 
 }
 .logo{
