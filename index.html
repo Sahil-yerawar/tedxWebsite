@@ -251,13 +251,9 @@
 
 			<div class="container">
 
-          <!--div class="col-sm-1 col-xs-1">
-                <div id="apply-section">
-                <br> </br>
-                <br> </br>
-              <img src="images/Line particles-02.png" alt="" style="width: 200px; height: 450px;"/>
-              </div>
-          </div>-->
+          
+
+
           		<div class="col-md-4">
           			<h3 id="about1"> <font color=#021525>What is TEDx?</font></h3>
           			<div id="about-section1">
@@ -1022,17 +1018,20 @@
 	<script type="text/javascript">
 
 		$(document).ready(function() {
-			$('#about1').click(function() {
-	                $('#about-section1').slideToggle("fast");
-		        });
 
-			$('#about2').click(function() {
-	                $('#about-section2').slideToggle("fast");
-		        });
+			if (window.innerWidth <= 768) {
+				$('#about1').click(function() {
+		                $('#about-section1').slideToggle("fast");
+			        });
 
-			$('#about3').click(function() {
-	                $('#about-section3').slideToggle("fast");
-		        });
+				$('#about2').click(function() {
+		                $('#about-section2').slideToggle("fast");
+			        });
+
+				$('#about3').click(function() {
+		                $('#about-section3').slideToggle("fast");
+			        });
+			}
 		});
 
 	</script>
