@@ -242,7 +242,7 @@
 	</section><!--/#explore-->
 
 	<section id="about">
-		<canvas id="aboutdots"></canvas>
+
 
 
 		<div class="about-section" style="background-color:#FFFFFF;border:0px;margin-bottom: 1cm;border-color: #021525;height: 94vh">
@@ -251,13 +251,9 @@
 
 			<div class="container">
 
-          <!--div class="col-sm-1 col-xs-1">
-                <div id="apply-section">
-                <br> </br>
-                <br> </br>
-              <img src="images/Line particles-02.png" alt="" style="width: 200px; height: 450px;"/>
-              </div>
-          </div>-->
+
+
+
           		<div class="col-md-4">
           			<h3 id="about1" style="margin-bottom: 22.9%"> <font color=#021525>What is TEDx?</font></h3>
           			<div id="about-section1">
@@ -605,7 +601,14 @@
 
 					<div class="container">
 
-						<div class="col-sm-2 col-xs-2">
+						<div class="col-sm-4 col-xs-4 col-md-4 col-md-push-2">
+							<div id="apply-section">
+								<h1><font color=#021525></font></h1>
+								<img id="redbulb" src="images/TEDx Desktop Website Version-02.png" alt="" />
+							</div>
+						</div>
+
+						<div class="col-sm-2 col-xs-2 col-md-2">
 							<div id="apply-section">
 								<br> </br>
 								<br> </br>
@@ -613,25 +616,22 @@
 								<img src="images/Line particles-02.png" alt="" style="width: 200px; height: 450px;"/>
 							</div>
 						</div>
-						<div class="col-sm-4 col-xs-4">
-							<div id="apply-section">
-								<h1><font color=#021525></font></h1>
-								<img src="images/TEDx Desktop Website Version-02.png" alt="" style="width: 320px; background-size: cover; background-repeat: no-repeat;"/>
-							</div>
-						</div>
-						<div class="col-sm-4 col-xs-4">
-							<div id="apply-section">
-								<br> </br>
-								<br> </br>
-								<br> </br>
-								<h3 style="text-transform: none;"><a href="#" target="_self" style="text-transform: uppercase;background-color: #FF0000;color: #ffffff;">  Apply</a>   To Speak at TEDxIITHyderabad</h3>
 
-								<div class="status alert alert-success" style="display: none"></div>
-								If you have an idea that the world needs to hear, click apply and we’ll get back to you.
+						<div class="col-sm-4 col-md-4 col-xs-6">
+							<div id="apply-section">
+								<br> </br>
+								<br> </br>
+								<br> </br>
+								<h3><a href="#" target="_self" style="background-color: #FF0000;color: #ffffff;">  Apply</a>   To Speak at TEDxIITHyderabad</h3>
+
+								<hr id="reddotted" />
+
+								<div class="status alert alert-success" style="display: none"></div><font>
+								If you have an idea that the world needs to hear, click apply and we’ll get back to you.</font>
 								<p> </p>
 							</div>
 						</div>
-						<div class="col-sm-2 col-xs-2">
+						<div class="col-sm-2 col-md-2 hide-mobile">
 							<div id="apply-section">
 								<img src="images/Line particles-02.png" alt="" style="width: 600px; height: 450px;"/>
 
@@ -1018,21 +1018,26 @@
 	<script type="text/javascript">
 
 		$(document).ready(function() {
-			$('#about1').click(function() {
-	                $('#about-section1').slideToggle("fast");
-		        });
 
-			$('#about2').click(function() {
-	                $('#about-section2').slideToggle("fast");
-		        });
+			if (window.innerWidth <= 768) {
+				$('#about1').click(function() {
+		                $('#about-section1').slideToggle("fast");
+			        });
 
-			$('#about3').click(function() {
-	                $('#about-section3').slideToggle("fast");
-		        });
+				$('#about2').click(function() {
+		                $('#about-section2').slideToggle("fast");
+			        });
+
+				$('#about3').click(function() {
+		                $('#about-section3').slideToggle("fast");
+			        });
+			}
 		});
 
 	</script>
+
 	<script>
+
 	function isScrolledIntoView(elem)
 {
 	var docViewTop = $(window).scrollTop();
@@ -1073,7 +1078,7 @@ $(window).scroll(function() {
     		canvas.height = window.innerHeight;
     		canvas.style.display = 'block';
     		ctx.fillStyle = color;
-    		ctx.lineWidth = .2;
+    		ctx.lineWidth = .1;
     		ctx.strokeStyle = color;
 
 
@@ -1172,288 +1177,7 @@ $(window).scroll(function() {
 
     </script>
 
-    <script type="text/javascript">
-    	//CANVAS
-    	$(function(){
 
-    		var isMobile = {
-    			Android: function() {
-    				return navigator.userAgent.match(/Android/i);
-    			},
-    			BlackBerry: function() {
-    				return navigator.userAgent.match(/BlackBerry/i);
-    			},
-    			iOS: function() {
-    				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    			},
-    			Opera: function() {
-    				return navigator.userAgent.match(/Opera Mini/i);
-    			},
-    			Windows: function() {
-    				return navigator.userAgent.match(/IEMobile/i);
-    			},
-    			any: function() {
-    				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    			}
-    		};
-
-    		if(!isMobile.any()){
-
-    			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    			var canvas = document.getElementById('aboutdots'),
-    			ctx = canvas.getContext('2d'),
-    			color = '#1e1e1e';
-    			canvas.width = window.innerWidth;
-    			canvas.height = window.innerHeight;
-    			canvas.style.display = 'block';
-    			ctx.fillStyle = color;
-    			ctx.lineWidth = .2;
-    			ctx.strokeStyle = color;
-
-
-    			var mousePosition = {
-    				x: w/4,
-    				y: h/4
-    			};
-
-    			var dots = {
-    				nb: 150,
-    				distance: 100,
-    				d_radius: 150,
-    				array: []
-    			};
-
-    			function Dot(){
-    				this.x = Math.random() * canvas.width;
-    				this.y = Math.random() * canvas.height;
-
-    				this.vx = -.5 + Math.random();
-    				this.vy = -.5 + Math.random();
-
-    				this.radius = Math.random();
-    			}
-
-    			Dot.prototype = {
-    				create: function(){
-    					ctx.beginPath();
-	    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-	    	            //ctx.fill();
-	    	        },
-
-	    	        animate: function(){
-	    	        	for(i = 0; i < dots.nb; i++){
-
-	    	        		var dot = dots.array[i];
-
-	    	        		if(dot.y < 0 || dot.y > canvas.height){
-	    	        			dot.vx = dot.vx;
-	    	        			dot.vy = - dot.vy;
-	    	        		}
-	    	        		else if(dot.x < 0 || dot.x > canvas.width){
-	    	        			dot.vx = - dot.vx;
-	    	        			dot.vy = dot.vy;
-	    	        		}
-	    	        		dot.x += dot.vx;
-	    	        		dot.y += dot.vy;
-	    	        	}
-	    	        },
-
-	    	        line: function(){
-	    	        	for(i = 0; i < dots.nb; i++){
-	    	        		for(j = 0; j < dots.nb; j++){
-	    	        			i_dot = dots.array[i];
-	    	        			j_dot = dots.array[j];
-
-	    	        			if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-	    	        				if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-	    	        					ctx.beginPath();
-	    	        					ctx.moveTo(i_dot.x, i_dot.y);
-	    	        					ctx.lineTo(j_dot.x, j_dot.y);
-	    	        					ctx.stroke();
-	    	        					ctx.closePath();
-	    	        				}
-	    	        			}
-	    	        		}
-	    	        	}
-	    	        }
-	    	    };
-
-	    	    function createDots(){
-	    	    	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	    	    	for(i = 0; i < dots.nb; i++){
-	    	    		dots.array.push(new Dot());
-	    	    		dot = dots.array[i];
-
-	    	    		dot.create();
-	    	    	}
-
-	    	    	dot.line();
-	    	    	dot.animate();
-	    	    }
-
-	    	    // $('canvas').on('mousemove mouseleave', function(e){
-	    	    //     if(e.type == 'mousemove'){
-	    	    //         mousePosition.x = e.clientX;
-	    	    //         mousePosition.y = e.clientY;
-	    	    //         $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
-	    	    //     }
-	    	    //     if(e.type == 'mouseleave'){
-	    	    //         mousePosition.x = canvas.width / 2;
-	    	    //         mousePosition.y = canvas.height / 2;
-	    	    //          $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
-	    	    //     }
-	    	    // });
-	    	    setInterval(createDots, 1000/30);
-	    	}
-	    });
-
-
-	</script>
-
-
-
-	<script type="text/javascript">
-    	//CANVAS
-    	$(function(){
-
-    		var isMobile = {
-    			Android: function() {
-    				return navigator.userAgent.match(/Android/i);
-    			},
-    			BlackBerry: function() {
-    				return navigator.userAgent.match(/BlackBerry/i);
-    			},
-    			iOS: function() {
-    				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    			},
-    			Opera: function() {
-    				return navigator.userAgent.match(/Opera Mini/i);
-    			},
-    			Windows: function() {
-    				return navigator.userAgent.match(/IEMobile/i);
-    			},
-    			any: function() {
-    				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    			}
-    		};
-
-    		if(!isMobile.any()){
-
-
-	    		var heightThingy = document.getElementById('contact').height;
-	    		var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	    		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	    	    var canvas = document.getElementById('contactdots'),
-
-	    	      ctx = canvas.getContext('2d'),
-	    	      color = '#ffffff';
-	    	    canvas.width = window.innerWidth;
-	    	    canvas.height = window.innerHeight;
-	    	    canvas.style.height = '60%';
-	    	    canvas.style.display = 'block';
-	    	    ctx.fillStyle = color;
-	    	    ctx.lineWidth = .2;
-	    	    ctx.strokeStyle = color;
-
-
-	    	    var mousePosition = {
-	    	        x: w/2,
-	    	        y: h/2
-	    	    };
-
-	    	    var dots = {
-	    	        nb: 150,
-	    	        distance: 120,
-	    	        d_radius: 150,
-	    	        array: []
-	    	    };
-
-	    	    function Dot(){
-	    	        this.x = Math.random() * canvas.width;
-	    	        this.y = Math.random() * canvas.height;
-
-	    	        this.vx = -.5 + Math.random();
-	    	        this.vy = -.5 + Math.random();
-
-	    	        this.radius = Math.random();
-	    	    }
-
-	    	    Dot.prototype = {
-	    	        create: function(){
-	    	            ctx.beginPath();
-	    	            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-	    	            //ctx.fill();
-	    	        },
-
-	    	        animate: function(){
-	    	        	for(i = 0; i < dots.nb; i++){
-
-	    	        		var dot = dots.array[i];
-
-	    	        		if(dot.y < 0 || dot.y > canvas.height){
-	    	        			dot.vx = dot.vx;
-	    	        			dot.vy = - dot.vy;
-	    	        		}
-	    	        		else if(dot.x < 0 || dot.x > canvas.width){
-	    	        			dot.vx = - dot.vx;
-	    	        			dot.vy = dot.vy;
-	    	        		}
-	    	        		dot.x += dot.vx;
-	    	        		dot.y += dot.vy;
-	    	        	}
-	    	        },
-
-	    	        line: function(){
-	    	        	for(i = 0; i < dots.nb; i++){
-	    	        		for(j = 0; j < dots.nb; j++){
-	    	        			i_dot = dots.array[i];
-	    	        			j_dot = dots.array[j];
-
-	    	        			if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-	    	        				if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-	    	        					ctx.beginPath();
-	    	        					ctx.moveTo(i_dot.x, i_dot.y);
-	    	        					ctx.lineTo(j_dot.x, j_dot.y);
-	    	        					ctx.stroke();
-	    	        					ctx.closePath();
-	    	        				}
-	    	        			}
-	    	        		}
-	    	        	}
-	    	        }
-	    	    };
-
-	    	    function createDots(){
-	    	    	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	    	    	for(i = 0; i < dots.nb; i++){
-	    	    		dots.array.push(new Dot());
-	    	    		dot = dots.array[i];
-
-	    	    		dot.create();
-	    	    	}
-
-	    	    	dot.line();
-	    	    	dot.animate();
-	    	    }
-
-	    	    // $("#contactdots").on('mousemove mouseleave', function(e){
-	    	    //     if(e.type == 'mousemove'){
-	    	    //         mousePosition.x = e.clientX;
-	    	    //         mousePosition.y = e.clientY;
-	    	    //         // $( "#log" ).text( "clientX: " + e.clientX + ", clientY: " + e.clientY );
-	    	    //     }
-	    	    //     if(e.type == 'mouseleave'){
-	    	    //         mousePosition.x = canvas.width / 2;
-	    	    //         mousePosition.y = canvas.height / 2;
-	    	    //         // $( "#log" ).text( "clientX: " + canvas.width/2 + ", clientY: " + canvas.height/2 );
-	    	    //     }
-	    	    // });
-	    	    setInterval(createDots, 1000/30);
-	    	}
-	    });
-
-	</script>
 </body>
 
 </html>
