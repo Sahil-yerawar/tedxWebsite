@@ -223,8 +223,8 @@ h2 {
   vertical-align: bottom;
 
   font-size: 30px;
-
-  color: #fff;
+/*
+  color: #fff;*/
 
   text-transform: uppercase;
 
@@ -747,7 +747,7 @@ h2 {
 
   padding-top: 20px;
 
-  left: 30%;
+  left: 37%;
 
   z-index: +1
 }
@@ -868,7 +868,7 @@ h2 {
 
   margin-bottom: 50px;
 
-  margin-left: 20px;
+  margin-left: 30px;
 
   margin-right: 20px;
 
@@ -1869,6 +1869,10 @@ h2 {
 /*
   background-color: #000*/
 
+}
+
+.textblack{
+  color: #000;
 }
 
 

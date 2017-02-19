@@ -290,7 +290,7 @@ input, button, select, textarea {
 }
 
 a {
-    color: #428bca;
+    color: #fff;
     text-decoration: none
 }
 
@@ -747,7 +747,7 @@ pre code {
 .row1 {
     margin-left: -15px;
     margin-right: -15px;
-    background-color: #062638
+    background-color: transparent;
 }
 .row3 {
     margin-left: -15px;
