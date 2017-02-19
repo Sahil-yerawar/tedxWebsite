@@ -1875,6 +1875,11 @@ h2 {
   color: #000;
 }
 
+.navbarBlack{
+  background-color: #000;
+  opacity: 0.89;
+}
+
 
 
 @media only screen and (max-width: 768px) {
