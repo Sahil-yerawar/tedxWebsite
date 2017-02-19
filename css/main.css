@@ -1091,6 +1091,7 @@ h2 {
 
 
   text-align: center;
+  z-index: 15;
 
 
 
@@ -1128,7 +1129,7 @@ h2 {
 
 
   margin: 0 auto;
-
+  position: relative;
 
 }
 
@@ -2499,7 +2500,7 @@ h2 {
   opacity: 1;
 
 
-  left: 25vw;
+  left: 20vw;
 
 
   margin-left: auto;
