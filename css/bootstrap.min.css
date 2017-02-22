@@ -5669,12 +5669,13 @@ button.close {
     bottom: -10px
 }
 
-.carousel {
-    position: relative
+.carousel {/*
+    position: relative*/
+    width: 100%;
 }
 
 .carousel1{
-  width: 100%
+  width: 100%;
 }
 
 .carousel-inner {
