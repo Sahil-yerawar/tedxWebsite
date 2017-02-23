@@ -1167,7 +1167,7 @@ h2 {
   margin-right: 20px;
 
 
-  padding-top: 60px;
+  padding-top: 80px;
 
 
   padding-bottom: 5vh;
@@ -1193,8 +1193,10 @@ h2 {
 
 }
 
+
+
 #event h2 {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 
 /*
     margin-top: 30px;
@@ -2760,6 +2762,28 @@ h2 {
 
   }
 
+  .contact-section li{
+    margin: 0px;
+    width: 80%
+    /*padding: 20px;*/
+  }
+
+  #contact h3{
+    font-size: 18px;
+  }
+
+  #contact .container{
+    padding-top: 2px;
+  }
+
+  .contact-section h2{
+    padding-bottom: 0;
+    padding-top: 105px;
+  }
+
+  ul{
+    padding-left: 0
+  }
   .slide-detail{
     width: inherit;
 

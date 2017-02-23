@@ -74,7 +74,7 @@
                     		<li class="scroll active"><a href="#home" class="rBar">Home</a></li>
                     		<!--<li class="scroll"><a href="#explore">Explore</a></li>-->
                     		<li class="scroll"><a href="#about" class="rBar">About</a></li>
-                    		<li class="scroll"><a href="#event"class="rBar">Event</a></li>
+                    		<li class="scroll"><a href="#event"class="rBar">Speakers</a></li>
                     		<!--<li class="no-scroll"><a href="team.html" target="_self">Team</a></li>-->
                     		<li class="scroll"><a href="#apply" class="rBar">Apply</a></li>
                     		<li class="scroll"><a href="#news" class="rBar">News</a></li>
@@ -112,7 +112,7 @@
     						<li class="scroll active"><a href="#home">Home</a></li>
     						<!--<li class="scroll"><a href="#explore">Explore</a></li>-->
     						<li class="scroll"><a href="#about">About</a></li>
-    						<li class="scroll"><a href="#event">Event</a></li>
+    						<li class="scroll"><a href="#event">Speakers</a></li>
     						<!--<li class="no-scroll"><a href="team.html" target="_self">Team</a></li>-->
     						<li class="scroll"><a href="#apply">Apply</a></li>
     						<li class="scroll"><a href="#news">News</a></li>
@@ -300,7 +300,7 @@
 
 <!--/#about-->
 
-    <section id="event" style="height: 100vh;"><!--
+    <section id="event" ><!--
         <div class="container">
             <div class="row">
             	<div class="col-sm-12 col-md-9">-->
@@ -370,10 +370,15 @@
                         </a>
 
                     </div>-->
-
+										<div class="current_speakers" style="height: 300vh;width: 100vh">
+											<div class="wide"><h2 class="heading" ><u style="color: #000;text-decoration: none;border-bottom: 2px solid red;">Our Current Speakers</u></h2></div>
+										</div>
+										<div class="prev_heading" style="min-height:20vh;width:100%;">
+											<div class="wide"><h2 class="heading" style="font-size: 35px;padding-top: 5vh"><u style="text-decoration: none;border-bottom: 2px solid red;">Our Previous Speakers</u></h2></div>
+										</div>
                     <div class="center-carousel" style="height: 100vh">
                     <div class="carousel slide article-slide" id="article-photo-carousel" data-interval="false">
-                        <div class="wide"><h2 class="heading" style="font-size: 35px;padding-top: 5vh;"><u style="color: #fff;text-decoration: none;border-bottom: 2px solid red;">Our Previous Speakers</u></h2></div>
+
 
                             <div class="carousel-inner cont-slider" style="height: 100vh;">
 
@@ -909,14 +914,14 @@
                                 </div>
                             </div>
                           <!--</div>--></li>
-                          <li>
+                          <div class="wide"><li>
                           <!--<div class="col-sm-4 col-xs-4">
                           --><!--<div id="x1" style="height: 10px;width: 10px;overflow: hidden  "><div style="color:#021525;border:0px">test</div>
                         --><!--div id="map" style="height: 100%;width: 100%"></div>-->
                                   <div id="map" style="height: 250px;width: 250px"></div>
                           <!--</div>-->
                         <!--</div>-->
-                        </li>
+											</li></div>
                         <li>
                         <!--<div class="col-sm-4 col-xs-4">
                         --><div class="contact-address">
@@ -1059,28 +1064,57 @@
 
 	<script>
 
-	function isScrolledIntoView(elem)
-{
-	var docViewTop = $(window).scrollTop();
-	var docViewBottom = docViewTop + $(window).height();
-	var elemTop = $(elem).offset().top;
-	var elemBottom = elemTop + $(elem).height();
-	return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+// 	function isScrolledIntoView(elem)
+// {
+// 	var docViewTop = $(window).scrollTop();
+// 	var docViewBottom = docViewTop + $(window).height();
+// 	var elemTop = $(elem).offset().top;
+// 	var elemBottom = elemTop + $(elem).height();
+// 	return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+// }
+// function isScrolledIntoView1(elem)
+// {
+// var docViewTop = $(window).scrollTop();
+// var docViewBottom = docViewTop + $(window).height();
+// var elemTop = $(elem).offset().top;
+// var elemBottom = elemTop + $(elem).height();
+// return ((elemBottom <= docViewBottom)/*(elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop)*/);
+// }
+//
+// $(window).scroll(function() {
+// 	if(isScrolledIntoView($('#about')))
+// 	{
+// 			$('.row1').addClass('navbarBlack');
+// 	}
+// 	if(isScrolledIntoView($('#home')))
+// 	{
+// 			$('.row1').removeClass('navbarBlack');
+// 	}
+// 	if(isScrolledIntoView1($('#news')) && $(window).scrollTop() <= $('#news').offset().top + ($('#news').height())*0.92 )
+// 	{
+// 			$('.row1').addClass('navbarBlack');
+// 	}
+// 	if(isScrolledIntoView($('#contact')))
+// 	{
+// 			/*alert("Visible");*/
+// 			$('.row1').removeClass('navbarBlack');
+// 	}
+//
+// });
+$(window).scroll(function(){
 
-$(window).scroll(function() {
-	if(isScrolledIntoView($('#about')))
-	{
-			$('.row1').addClass('navbarBlack');
+	if($(window).scrollTop()  < $('#about').offset().top){
+		var trans = $(window).scrollTop()/$('#home').height();
+		/*alert(trans);*/
+		$('.row1').css('background-color','rgba(0,0,0,' +0.9*trans*trans+')');
 	}
-	if(isScrolledIntoView($('#home')))
-	{
-			$('.row1').removeClass('navbarBlack');
-	}
-	if(isScrolledIntoView($('#contact')))
-	{
-			/*alert("Visible");*/
-			$('.rBar').removeClass('navbarBlack');
+	else{
+		if($(window).scrollTop() > $('#news').offset().top + ($('#news').height())){
+			$('.row1').css('background-color','rgba(0,0,0,0)');
+		}
+		if($(window).scrollTop() <= $('#news').offset().top + ($('#news').height()*0.93)){
+			$('.row1').css('background-color','rgba(0,0,0,0.9)');
+		}
 	}
 
 });

@@ -460,3 +460,10 @@
   }
 
 }
+
+
+@media (max-width: 539px){
+  .contact-section {
+    /*height: 90vh;*/
+  }
+}
