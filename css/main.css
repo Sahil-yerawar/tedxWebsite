@@ -25,7 +25,6 @@ body {
 
   background-color: #fff;
 
-
 }
 
 #homedots {
@@ -172,11 +171,11 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-family: 'Raleway', 'sans-serif';
 
 
   font-weight: 300;
-
+  text-align: center;
 
   /*text-transform: uppercase;*/
 
@@ -1012,7 +1011,7 @@ h2 {
   padding-top: 20px;
 
 
-  left: 37%;
+  left: 42%;
 
   z-index: +1
 }
@@ -1134,6 +1133,7 @@ h2 {
 
 
   display: block;
+    text-align: center;
 
 
   margin: 0 auto;
@@ -1144,6 +1144,7 @@ h2 {
 
 .about-content{
   width: 100%;
+
 
 
 }
@@ -1175,7 +1176,7 @@ h2 {
   margin-right: 20px;
 
 
-  padding-top: 60px;
+  padding-top: 80px;
 
 
   padding-bottom: 5vh;
@@ -1201,8 +1202,10 @@ h2 {
 
 }
 
+
+
 #event h2 {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 
 /*
     margin-top: 30px;
@@ -1223,9 +1226,6 @@ h2 {
 
 
   min-height: 656px;
-
-
-  display: block;
 
 
   margin: 0;
@@ -2777,6 +2777,28 @@ h2 {
 
   }
 
+  .contact-section li{
+    margin: 0px;
+    width: 80%
+    /*padding: 20px;*/
+  }
+
+  #contact h3{
+    font-size: 18px;
+  }
+
+  #contact .container{
+    padding-top: 2px;
+  }
+
+  .contact-section h2{
+    padding-bottom: 0;
+    padding-top: 105px;
+  }
+
+  ul{
+    padding-left: 0
+  }
   .slide-detail{
     width: inherit;
 
@@ -2793,8 +2815,11 @@ h2 {
   }
   #event h2{
     color: #fff;
+    padding-top: 20px;
 
-
+  }
+  #apply h2{
+    text-align: left;
   }
   #news h2{
     max-width: 100%;
