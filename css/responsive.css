@@ -391,6 +391,10 @@
   #sponsor h2 {
     font-size: 30px;
   }
+  #event h2{
+    left: 33%;
+    font-size: 28px;
+  }
 
   #applybutton {
       font-size: 25px;
