@@ -78,6 +78,14 @@ body {
   background-repeat: no-repeat;
 }
 
+#about1 {
+  margin-bottom: 22.9%;
+}
+
+#about3 {
+  margin-bottom: 15.4%;
+}
+
 #contactdots {
   position:absolute;
 
@@ -2551,6 +2559,15 @@ h2 {
 .hide-mobile{
   display: none;
 }
+
+#about1 {
+  margin-bottom: 0;
+}
+
+#about3 {
+  margin-bottom: 0;
+}
+
 
 #redbulb{
   position: absolute;
