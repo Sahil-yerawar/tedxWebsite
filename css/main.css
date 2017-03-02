@@ -2765,6 +2765,11 @@ h2 {
 
   }
 
+
+  .current_speakers p{
+    padding-bottom: 50px;
+  }
+
   /*.about-section font{
     padding-bottom: -2px;
 
