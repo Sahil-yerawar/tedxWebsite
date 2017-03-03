@@ -2284,7 +2284,7 @@ h2 {
 }
 .profile_pic{
   display: inline-block;
-
+  background-size: 100%;
 
   /*border: thin solid #fff;
 
