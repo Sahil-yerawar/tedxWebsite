@@ -2321,6 +2321,48 @@ h2 {
 */
 }
 
+.Home a{
+  color: #000;
+}
+.Home a:hover{
+  color: #ff0000;
+}
+
+.sponsor_pic{
+  display: inline-block;
+  background-size: 100%;
+
+  /*border: thin solid #fff;
+
+*/
+  background-image: url("../images/Sahil.jpeg");
+
+
+  margin-left: 30px;
+
+
+  margin-top: 10px;
+
+
+  width: 200px;
+
+
+  height: 200px;
+
+
+  /*border-radius: 50%;*/
+
+
+  /*background-size: cover;*/
+
+
+  background-repeat: no-repeat;
+
+
+  background-position: center center;
+
+}
+
 
 .profile_pic1{
   display: inline-block;
