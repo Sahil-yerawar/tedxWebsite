@@ -2327,6 +2327,9 @@ h2 {
 .Home a:hover{
   color: #ff0000;
 }
+.linkback:hover{
+  color: #ff0000;
+}
 
 .sponsor_pic{
   display: inline-block;
