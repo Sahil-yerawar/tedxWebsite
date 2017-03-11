@@ -1,5 +1,6 @@
 var express = require('express');
-var fs=require('fs');
+var fs        = require('fs');
+var publicdir = __dirname + '/public';
 var MongoClient=require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
@@ -52,7 +53,19 @@ app.use(bodyParser.urlencoded({
    extended: true
 }));
 
-
+app.use(function(req, res, next) {
+  if (req.path.indexOf('.') === -1) {
+    var file = publicdir + req.path + '.html';
+    fs.exists(file, function(exists) {
+      if (exists)
+        req.url += '.html';
+      next();
+    });
+  }
+  else
+    next();
+});
+app.use(express.static(publicdir));
 /*app.use('/static', express.static('public'));*/
 app.use(express.static(__dirname + '/'));
 /*app.use(express.static('css'));
@@ -63,8 +76,8 @@ app.use(express.static('fonts'));*/
 // A browser's default method is 'GET', so this
 // is the route that express uses when we visit
 // our site initially.
-app.get('/team.html',function(req,res){
-  fs.readFile('team.html',function(err,data){
+app.get('/team',function(req,res){
+  fs.readFile('team1.html',function(err,data){
     res.writeHead(200, {
               'Content-Type': 'text/html',
                   'Content-Length' : data.length
@@ -75,6 +88,7 @@ app.get('/team.html',function(req,res){
 
 
 });
+
 app.get('/', function(req, res){
   // The form's action is '/' and its method is 'POST',
   // so the `app.post('/', ...` route will receive the
