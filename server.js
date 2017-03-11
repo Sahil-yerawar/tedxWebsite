@@ -37,9 +37,7 @@ var findRestaurants = function(db, callback) {
       } else {
          callback();
       }
-   });
-};
-
+   }
 //optional function to remove all documents in a function
 var removeRestaurants = function(db, callback) {
    db.collection('speakers').deleteMany( {}, function(err, results) {
