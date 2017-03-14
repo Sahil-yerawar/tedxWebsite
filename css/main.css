@@ -273,7 +273,7 @@ h2 {
 }
 
 .navbar-brand {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
 
 
   height: 90px;
@@ -400,7 +400,7 @@ h2 {
 }
 
 .fixed-menu .navbar-brand {
-  height: 66px;
+  height: 60px;
 
 
   margin-top: 0;
@@ -418,13 +418,13 @@ h2 {
 }
 
 .fixed-menu .navbar-brand img {
-  height:50px;
+  /*height:50px;*/
 
 
 
-  top: 10px;
+  /*top: 10px;*/
 
-
+  width: 60%;
 
 }
 
@@ -1341,7 +1341,7 @@ h2 {
 
 .ButtonApply button{
 
-    
+
     padding: 10px 20px;
 
 

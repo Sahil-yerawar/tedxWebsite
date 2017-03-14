@@ -59,12 +59,12 @@
 							<span class="icon-bar"></span>
 						</button>
 
-						<div class="extend-class"><!--
+						<div class="extend-class">
 							<div class="navbar-brand">
 							<a class="img-responsive" href="index.html">
-							<img class="img-responsive" src="images/Logo.png" alt="logo">
+							<img class="img-responsive" src="images/TEDxLogo2.png" alt="logo">
 						</a>
-					</div>-->
+					</div>
 				</div>
 			</div>
 
@@ -78,7 +78,7 @@
 					<!--<li class="no-scroll"><a href="team.html" target="_self">Team</a></li>-->
 					<li class="scroll"><a href="#apply" class="rBar">Attend</a></li>
 					<li class="scroll"><a href="#news" class="rBar">Partners</a></li>
-					<li><a href="./team.html">Team</a></li>
+					<li class="scroll"><a href="./team.html">Team</a></li>
 					<li class="scroll"><a href="#contact" class="rBar">Contact</a></li>
 				</ul>
 			</div>
@@ -161,7 +161,7 @@
 <div class="main_img">
 	<div class="theme_main">
 		<img src="images/Main Theme-02.png"class="teme">
-		<img src="images/TEDxLogo2.png" class="logo">
+		<!-- <img src="images/TEDxLogo2.png" class="logo"> -->
 	</div>
 
 </div>
@@ -1487,23 +1487,23 @@ $(document).ready(function() {
 // 	}
 //
 // });
-$(window).scroll(function(){
-
-	if($(window).scrollTop()  < $('#about').offset().top){
-		var trans = $(window).scrollTop()/$('#home').height();
-		/*alert(trans);*/
-		$('.row1').css('background-color','rgba(0,0,0,' +0.9*trans*trans+')');
-	}
-	else{
-		if($(window).scrollTop() > $('#news').offset().top + ($('#news').height())){
-			$('.row1').css('background-color','rgba(0,0,0,0)');
-		}
-		if($(window).scrollTop() <= $('#news').offset().top + ($('#news').height()*0.93)){
-			$('.row1').css('background-color','rgba(0,0,0,0.9)');
-		}
-	}
-
-});
+// $(window).scroll(function(){
+//
+// 	if($(window).scrollTop()  < $('#about').offset().top){
+// 		var trans = $(window).scrollTop()/$('#home').height();
+// 		/*alert(trans);*/
+// 		$('.row1').css('background-color','rgba(0,0,0,' +0.9*trans*trans+')');
+// 	}
+// 	else{
+// 		if($(window).scrollTop() > $('#news').offset().top + ($('#news').height())){
+// 			$('.row1').css('background-color','rgba(0,0,0,0)');
+// 		}
+// 		if($(window).scrollTop() <= $('#news').offset().top + ($('#news').height()*0.93)){
+// 			$('.row1').css('background-color','rgba(0,0,0,0.9)');
+// 		}
+// 	}
+//
+// });
 </script>
 <script>
 window.twttr = (function(d, s, id) {
@@ -1542,7 +1542,9 @@ $(function(){
 
 	var mousePosition = {
 		x: w/4,
-		y: h/2
+		y: h/2,
+		x2: w*0.75,
+		y2: h/2
 	};
 
 	var dots = {
@@ -1594,7 +1596,10 @@ $(function(){
 					j_dot = dots.array[j];
 
 					if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-						if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
+						if(
+							( (i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius)
+							||
+							( (i_dot.x - mousePosition.x2) < dots.d_radius && (i_dot.y - mousePosition.y2) < dots.d_radius && (i_dot.x - mousePosition.x2) > - dots.d_radius && (i_dot.y - mousePosition.y2) > - dots.d_radius) ){
 							ctx.beginPath();
 							ctx.moveTo(i_dot.x, i_dot.y);
 							ctx.lineTo(j_dot.x, j_dot.y);
@@ -1620,20 +1625,26 @@ $(function(){
 		dot.animate();
 	}
 
-	// $('canvas').on('mousemove mouseleave', function(e){
-	//     if(e.type == 'mousemove'){
-	//         mousePosition.x = e.clientX;
-	//         mousePosition.y = e.clientY;
-	//     }
-	//     if(e.type == 'mouseleave'){
-	//         mousePosition.x = canvas.width / 8;
-	//         mousePosition.y = canvas.height*(1-1/8);
-	//     }
-	// });
+	$('canvas').on('mousemove mouseleave', function(e){
+	    if(e.type == 'mousemove'){
+	        mousePosition.x = e.clientX;
+	        mousePosition.y = e.clientY;
+	        mousePosition.x2 = e.clientX;
+	        mousePosition.y2 = e.clientY;
+	    }
+	    if(e.type == 'mouseleave'){
+	        mousePosition.x = w/4;
+	        mousePosition.y = h/2;
+	        mousePosition.x2 = w*0.75;
+	        mousePosition.y2 = h/2;
+	    }
+	});
 	setInterval(createDots, 1000/30);
 });
 
 </script>
+
+
 
 
 </body>
