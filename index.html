@@ -1372,7 +1372,7 @@ function initMap() {
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.popupoverlay.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.popupoverlay.js"></script> -->
 <!-- <script type="text/javascript" src="js/smoothscroll.js"></script> -->
 <!-- <script type="text/javascript" src="js/jquery.parallax.js"></script> -->
 <script type="text/javascript" src="js/coundown-timer.js"></script>
@@ -1382,29 +1382,6 @@ function initMap() {
 <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
-<script>
-	$(document).ready(function () {
-			$.fn.popup.defaults.pagecontainer = '.container'
-	});
-</script>
-<div>
-<div id="fadeandscale" class="well">
-	<h4>Tickets</h4>
-	<iframe id="ticketWidget" src="http://www.meraevents.com/ticketWidget?eventId=123713&ucode=organizer" width="100%" height="600px" frameborder="0px" ></iframe>
-	<button class="fadeandscale_close btn btn-default">Close</button>
-</div>
-
-</div>
-<script>
-$(document).ready(function () {
-
-		$('#fadeandscale').popup({
-			pagecontainer: '.container',
-			transition: 'all 0.3s'
-		});
-
-});
-</script>
 
 <style>
 #fadeandscale {
